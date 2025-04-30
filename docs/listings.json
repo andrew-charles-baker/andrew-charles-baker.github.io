@@ -1,0 +1,22 @@
+[
+  {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/posts/DiD/index.html",
+      "/posts/posts/log_age/index.html"
+    ]
+  },
+  {
+    "listing": "/research/index.html",
+    "items": [
+      "/research/articles/diversity_washing/index.html",
+      "/research/articles/staggered_did/index.html",
+      "/research/articles/bagel/index.html",
+      "/research/articles/dual_class/index.html",
+      "/research/articles/slr/index.html",
+      "/research/working_papers/ml_comp/index.html",
+      "/research/working_papers/antitakeover/index.html",
+      "/research/working_papers/activism/index.html"
+    ]
+  }
+]
