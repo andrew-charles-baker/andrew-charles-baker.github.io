@@ -284,7 +284,7 @@
     "href": "research/articles/bblj/index.html",
     "title": "Statistical Learning Can Help the Judiciary Fulfill Its Gatekeeping Role Over Expert Witnesses",
     "section": "",
-    "text": "Paper\n\n\n\n\nThis article examines the historical challenges of expert testimony in the American legal system and proposes a forward-looking reform grounded in modern statistical learning techniques. Tracing the evolution from court-appointed experts to partisan witnesses, the paper highlights how adversarial practices and scientific complexity have strained judicial gatekeeping, particularly under the Daubert standard of judicial review of expert testimony. The paper argues that shifting from traditional model-driven estimation methods to data-driven, algorithmic approaches can improve the reliability and transparency of expert evidence. Through empirical examples in securities litigation and corporate valuation, it demonstrates how statistical learning methods can reduce expert discretion and aid judicial decision-making. The proposed reforms offer a practical pathway for courts to enhance the quality and fairness of expert testimony in modern litigation.\n\n\n\nThis figure shows the number of hits from the Google Scholar “Cases” database for “expert report” over time.\n\n\n\nFigure 1"
+    "text": "Paper"
   },
   {
     "objectID": "research/articles/bblj/index.html#links",
@@ -297,15 +297,15 @@
     "objectID": "research/articles/bblj/index.html#abstract",
     "href": "research/articles/bblj/index.html#abstract",
     "title": "Statistical Learning Can Help the Judiciary Fulfill Its Gatekeeping Role Over Expert Witnesses",
-    "section": "",
-    "text": "This article examines the historical challenges of expert testimony in the American legal system and proposes a forward-looking reform grounded in modern statistical learning techniques. Tracing the evolution from court-appointed experts to partisan witnesses, the paper highlights how adversarial practices and scientific complexity have strained judicial gatekeeping, particularly under the Daubert standard of judicial review of expert testimony. The paper argues that shifting from traditional model-driven estimation methods to data-driven, algorithmic approaches can improve the reliability and transparency of expert evidence. Through empirical examples in securities litigation and corporate valuation, it demonstrates how statistical learning methods can reduce expert discretion and aid judicial decision-making. The proposed reforms offer a practical pathway for courts to enhance the quality and fairness of expert testimony in modern litigation."
+    "section": "Abstract",
+    "text": "Abstract\nThis article examines the historical challenges of expert testimony in the American legal system and proposes a forward-looking reform grounded in modern statistical learning techniques. Tracing the evolution from court-appointed experts to partisan witnesses, the paper highlights how adversarial practices and scientific complexity have strained judicial gatekeeping, particularly under the Daubert standard of judicial review of expert testimony. The paper argues that shifting from traditional model-driven estimation methods to data-driven, algorithmic approaches can improve the reliability and transparency of expert evidence. Through empirical examples in securities litigation and corporate valuation, it demonstrates how statistical learning methods can reduce expert discretion and aid judicial decision-making. The proposed reforms offer a practical pathway for courts to enhance the quality and fairness of expert testimony in modern litigation."
   },
   {
     "objectID": "research/articles/bblj/index.html#important-figure",
     "href": "research/articles/bblj/index.html#important-figure",
     "title": "Statistical Learning Can Help the Judiciary Fulfill Its Gatekeeping Role Over Expert Witnesses",
-    "section": "",
-    "text": "This figure shows the number of hits from the Google Scholar “Cases” database for “expert report” over time.\n\n\n\nFigure 1"
+    "section": "Important figure",
+    "text": "Important figure\nThis figure shows the number of hits from the Google Scholar “Cases” database for “expert report” over time.\n\n\n\nFigure 1"
   },
   {
     "objectID": "index.html",
