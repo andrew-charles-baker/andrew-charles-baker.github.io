@@ -1,0 +1,24 @@
+---
+title: "The Effects of Hedge Fund Activism"
+date: 2021-10-21
+author:
+  - name: Andrew C. Baker
+    affiliation: Berkeley Law School
+description: Working Paper
+---
+
+## Links
+
+-   [Paper](Baker_JMP.pdf)
+
+## Abstract
+
+In this paper I explore the relationship between the rise of hedge fund activism and firm outcomes, using a study design that explicitly takes into account how activists pick their targets. Contrary to much prior work, I find no evidence that activism is associated with increased firm operating performance or significant long-term returns once comparing to firms based on their similarity to the targets. However, activism does increase firm payouts to shareholders and decreases investment, consistent with the argument of many critics of activism. I also find that firm-level employment declines significantly following a targeting event, and that the subset of firms that experience an increase in operating performance also engage in higher levels of tax avoidance. The deregulation of proxy access rules, wholesale de-staggering of corporate boards, and the rise in importance of proxy advisory firms who frequently recommend voting for activist proposals have made firms more susceptible to aggressive activism over the past three decades. The results in this paper, coupled with the rhetorical shift in focus from short-term profits to sustainable growth by large institutional investors, suggest a re-framing of the public debate over the benefits of shareholder activism.
+
+## Important figure
+
+Figure 11 reports the average long-term buy-and-hold abnormal returns for the targeted  rms in our
+sample with its 95% confidence interval (in blue), as well as the average of the propensity-score weighted comparison returns for each target (in red). Panel (a) presents the results for  rms that are taken over within the five years following the event or pseudo-event, and Panel (b) reports the results for firms that are not taken over during this period.
+
+![Figure 1](pic.png)
+

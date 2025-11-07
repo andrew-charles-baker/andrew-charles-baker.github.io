@@ -1,0 +1,23 @@
+---
+title: "The Dubious Impact of State Antitakeover Provisions"
+date: 2025-11-05
+author:
+  - name: Andrew C. Baker
+    affiliation: Berkeley Law School
+description: Working Paper
+---
+
+## Links
+
+-   [Paper](antitakeover.pdf)
+-   [Code](https://github.com/andrewchbaker/State_Antitakeover)
+
+## Abstract
+
+Corporate governance scholars have engaged in a longstanding debate over the impact of state antitakeover provisions. Corporate law practitioners and researchers argue that the affirmation of the "poison pill" made the second generation of antitakeover statutes redundant, while empirical scholars in corporate finance continue to find wide-ranging impacts from their adoption. This paper subjects the standard approach used in the empirical literature to a series of straightforward extensions using current best practice in panel data analysis. Contrary to the majority of published research, there is scant evidence for a consistent and reliable impact of antitakeover statute adoption on firm activity. These findings follow logically from the legal argument that takeover statutes provide little additional takeover deterrence in the presence of a "shadow pill."
+
+## Important figure
+
+Figure 10 reports the event study estimates of the impact of poison pill law changes using the estimator from Callaway and Sant'Anna (2020) and the data and design changes described in Section 5.1. Model 1 includes only the fixed effects without any covariates, Model 2 includes the covariates in the short regression model from Karpoff and Wittry (2018), and Model 3 includes their full model.
+
+![Figure 3](pic.jpg)

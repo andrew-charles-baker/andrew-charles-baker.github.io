@@ -1,0 +1,40 @@
+---
+title: "Diversity Washing"
+date: 2024-04-25
+author:
+  - name: Andrew C. Baker
+    affiliation: Berkeley Law School
+  - name: David F. Larcker
+    affiliation: Stanford GSB
+  - name: Charles G. McClure
+    affiliation: Chicago Booth
+  - name: Durgesh Saraph
+  - name: Edward M. Watts
+    affiliation: Yale SOM
+description: <em>Journal of Accounting Research</em> 2024 (Joint with David F. Larcker, Charles G. McClure, Durgesh Saraph, and Edward M. Watts)
+doi: 10.1111/1475-679X.12542
+---
+
+## Paper
+
+-   [Paper](diversity_washing.pdf)
+
+## Abstract
+
+We provide large-sample evidence on whether U.S. publicly traded corporations use voluntary disclosures about their commitments to employee diversity opportunistically. We document significant discrepancies between companies' external stances on diversity, equity, and inclusion (DEI) and their hiring practices. Firms that discuss DEI excessively relative to their actual employee gender and racial diversity ("diversity washers") obtain superior scores from environmental, social, and governance (ESG) rating organizations and attract more investment from institutional investors with an ESG focus. These outcomes occur even though diversity-washing firms are more likely to incur discrimination violations and have negative human-capital-related news events. Our study provides evidence consistent with growing allegations of misleading statements from firms about their DEI initiatives and highlights the potential consequences of selective ESG disclosures.
+
+## Important figure
+
+Figure 5: Nonparametric summary of ESG outcomes by DEI discussion and diversity ranks. This figure presents the average of Refinitiv's Overall Score (panel A), Refinitiv's Social Score (panel B), Sustainalytics Overall Score (panel C), Sustainalytics Social Score (panel D), Ownership by US SIF funds (panel E), and Ownership by ESG funds, based on the fund name (panel F). Each heat map is broken down by the decile of DEI discussion (measured by the overall amount of DEI discussion in our corpus of SEC documents) and the decile of underlying diversity (measured by the percentage of a firm's U.S.-based workforce that is either female or non-white)
+
+![Figure 5](fig5.jpeg)
+
+``` bibtex
+@article{baker2022diversity,
+  title={Diversity washing},
+  author={Baker, Andrew C and Larcker, David F and McCLURE, CHARLES G and Saraph, Durgesh and Watts, Edward M},
+  journal={Journal of Accounting Research},
+  year={2022},
+  publisher={Wiley Online Library}
+}
+```

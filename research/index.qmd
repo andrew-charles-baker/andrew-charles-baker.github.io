@@ -1,0 +1,26 @@
+---
+title: "Research"
+listing:
+  - id: articles
+    contents: "articles/*/index.qmd"
+    sort: "date desc"
+    type: default
+    fields: [image, date, title, description]
+    date-format: "YYYY"
+  - id: working_papers
+    contents: "working_papers/*/index.qmd"
+    sort: "date desc"
+    type: default
+    fields: [image, date, title, description]
+    date-format: "YYYY"
+---
+
+## Working Papers
+
+::: {#working_papers}
+:::
+
+## Published Papers
+
+::: {#articles}
+:::

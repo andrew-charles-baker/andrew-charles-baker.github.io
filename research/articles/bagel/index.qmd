@@ -1,0 +1,39 @@
+---
+title: "Machine Learning and Predicted Returns for Event Studies in Securities Litigation"
+date: 2020-09-08
+author:
+  - name: Andrew C. Baker
+    affiliation: Berkeley Law School
+  - name: Jonah B. Gelbach
+    affiliation: Berkeley Law School
+description: <em>Journal of Law, Finance, and Accounting</em> 5(2) 2020 (Joint with Jonah B. Gelbach)
+doi: 10.1561/108.00000047
+---
+
+## Links
+
+-   [Paper](bagel.pdf)
+-   [Code](https://github.com/andrewchbaker/BaGel)
+
+## Abstract
+
+We investigate the use of machine learning (ML) and other robust estimation techniques in event studies conducted on single securities for the purpose of securities litigation. Single-firm event studies are widely used in civil litigation, with billions of dollars in settlements hinging on the outcome of the exercise. We find that regularization (equivalently, penalized estimation) can yield noticeable improvements in both the variance of event-date abnormal returns and significance-test power. Thus we believe that there is a role for ML methods in event studies used in securities litigation. At the same time, we find that ML-induced performance improvements are smaller than those based on other good practices. Most important are (i) the use of a peer index based on returns for firms in similar industries (how this is computed appears to be less important than that some version be included), and (ii) for significance testing, using the SQ test proposed in Gelbach et al. (2013), because it is robust to the considerable non-normality present in abnormal returns.
+
+## Important figure
+
+Figure 1 plots specification ranks. Each specification has 8 MSE performance values: two time periods (1999–2009 vs. 2009–2019), with and without the FFC factors, and two MSE normalization approaches ($\widehat{R}_{oos}^{k}$ and $\widehat{R}_{het}^k$, described below). Each gray dot represents a rank from 1 to 11, and each rank is represented once for each of the eight time-period/FFC-factor/MSE metric combinations. The diamonds plot the specifications’ average ranks. Blue diamonds signify models that allow firms to enter the regression function individually and use cross-validation and penalized regression; red diamonds represent specifications that do not.
+
+![Figure 1](fig.png)
+
+``` bibtex
+@article{baker2020machine,
+  title={Machine learning and predicted returns for event studies in securities litigation},
+  author={Baker, Andrew and Gelbach, Jonah B and others},
+  journal={Journal of Law, Finance, and Accounting},
+  volume={5},
+  number={2},
+  pages={231--272},
+  year={2020},
+  publisher={Now Publishers, Inc.}
+}
+```

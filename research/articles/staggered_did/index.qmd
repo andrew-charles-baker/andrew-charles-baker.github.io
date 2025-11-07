@@ -1,0 +1,41 @@
+---
+title: "How Much Should We Trust Staggered Difference-in-Differences Estimates?"
+date: 2022-02-22
+author:
+  - name: Andrew C. Baker
+    affiliation: Berkeley Law School
+  - name: David F. Larcker
+    affiliation: Stanford GSB
+  - name: Charles C.Y. Wang
+    affiliation: Harvard HBS
+description: <em>Journal of Financial Economics</em> 22(2) 2022 (Joint with David F. Larcker and Charles C.Y. Wang)
+doi: 10.1016/j.jfineco.2022.01.004
+---
+
+## Links
+
+-   [Paper](did.pdf)
+-   [Code](https://github.com/andrewchbaker/JFE_DID)
+
+## Abstract
+
+We explain when and how staggered difference-in-differences regression estimators, commonly applied to assess the impact of policy changes, are biased. These biases are likely to be relevant for a large portion of research settings in finance, accounting, and law that rely on staggered treatment timing, and can result in Type-I and Type-II errors. We summarize three alternative estimators developed in the econometrics and applied literature for addressing these biases, including their differences and tradeoffs. We apply these estimators to re-examine prior published results and show, in many cases, the alternative causal estimates or inferences differ substantially from prior papers.
+
+## Important figure
+
+The top panel of Fig. 3 illustrates the diagnostic test for Simulations 4, 5, and 6. Because the diagnostic test only applies to balanced panels, in constructing this figure our simulation is modified to artificially induce a balanced panel of firm-year observations from Compustat before drawing fixed effects and residuals from the empirical distribution.
+
+![Figure 3](fig.jpeg)
+
+``` bibtex
+@article{baker2022much,
+  title={How much should we trust staggered difference-in-differences estimates?},
+  author={Baker, Andrew C and Larcker, David F and Wang, Charles CY},
+  journal={Journal of Financial Economics},
+  volume={144},
+  number={2},
+  pages={370--395},
+  year={2022},
+  publisher={Elsevier}
+}
+```

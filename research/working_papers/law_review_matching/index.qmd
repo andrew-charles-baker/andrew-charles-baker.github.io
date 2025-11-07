@@ -1,0 +1,21 @@
+---
+title: "Fixing the Law Review Submission Game"
+date: 2025-11-05
+author:
+  - name: Andrew C. Baker
+    affiliation: Berkeley Law School
+description: Working Paper
+---
+
+## Links
+
+-   [Paper](Matching Markets for Law Reviews.pdf)
+-   [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102)
+
+## Abstract
+
+Every spring and fall, thousands of manuscripts fill the inboxes of student-run law reviews across the country during submission periods. The process quickly deteriorates into a frantic cycle of offers, requests for expedited decisions, and rejections. Authors who receive an offer immediately seek to parlay it into something “better”, quickly reaching out to notionally more prestigious journals to climb the publishing ladder. Student editors, inundated with submissions, are pressured to act quickly—sometimes within hours—on articles that they have clearly only had the time to skim. This unique system of publishing has its merits; while formal peer review in other disciplines has extended the time from submission to publication to multiple years, law professors are able to write and publish an article, with a full audit of citations, in a matter of months. However, a consensus has developed that stress on the system has tipped the balance of costs to exceed the benefits. The system of publishing American legal scholarship has become less a mechanism for identifying high-quality work than a repeated game of brinkmanship.
+
+The contours of this system produce unacceptable burdens and inequities to both students and faculty. Student editors are deluged with submissions, often numbering in the thousands per cycle, something that academics themselves would never countenance. Editors inevitably resort to using proxies—author credentials, institutional affiliation, or existing offers from peer journals—as substitutes for meaningful review. Journals perceived to be lower-ranked shoulder a disproportionate burden, as they screen manuscripts that higher-ranked journals steal through expedited consideration. Authors feel forced to play the expedite game or risk being left behind, producing behavior that, while rational in the moment, is clearly distasteful with hindsight. This system distributes labor inefficiently, undermines careful editorial evaluation, perpetuates status inequities in the academy, and wastes enormous amounts of unpaid student time. In economic terms, the law review submissions market suffers from a textbook case of congestion and market failure.
+
+This Article offers a new approach. Drawing on insights from economics and operations management, and the successful use of centralized matching in other two-sided markets, we propose redesigning the law review submission process as a coordinated matching market. In such a system, authors and journals would submit ranked preferences, and a deferred-acceptance algorithm would generate stable matches. This structure eliminates the offer-and-expedite game, distributes the burdens of review more evenly across journals, and gives both authors and editors greater predictability. Unlike prior reforms, it targets the systemic source of inefficiency: the misaligned incentives of decentralized submissions and ad hoc expedite requests. By replacing a chaotic bargaining game with a centralized matching mechanism, the law review system could become more equitable, more efficient, and ultimately more conducive to high-quality scholarship.
