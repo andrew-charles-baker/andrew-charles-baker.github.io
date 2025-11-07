@@ -18,6 +18,4 @@ Corporate governance scholars have engaged in a longstanding debate over the imp
 
 ## Important figure
 
-Figure 10 reports the event study estimates of the impact of poison pill law changes using the estimator from Callaway and Sant'Anna (2020) and the data and design changes described in Section 5.1. Model 1 includes only the fixed effects without any covariates, Model 2 includes the covariates in the short regression model from Karpoff and Wittry (2018), and Model 3 includes their full model.
-
-![Figure 3](pic.jpg)
+![Figure 3](pic_3.jpg)
