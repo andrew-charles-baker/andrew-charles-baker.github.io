@@ -1,26 +1,52 @@
 ---
 title: "Research"
-listing:
-  - id: articles
-    contents: "articles/*/index.qmd"
-    sort: "date desc"
-    type: default
-    fields: [image, date, title, description]
-    date-format: "YYYY"
-  - id: working_papers
-    contents: "working_papers/*/index.qmd"
-    sort: "date desc"
-    type: default
-    fields: [image, date, title, description]
-    date-format: "YYYY"
 ---
 
 ## Working Papers
 
-::: {#working_papers}
-:::
+**The Dubious Impact of State Antitakeover Provisions** (2025)
+[PDF](working_papers/antitakeover/antitakeover.pdf) | [Code](https://github.com/andrewchbaker/State_Antitakeover)
+
+**Fixing the Law Review Submission Game** (2025)
+[PDF](working_papers/law_review_matching/Matching Markets for Law Reviews.pdf) | [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102)
+
+**Difference-in-Differences Designs: A Practitioner's Guide** (2025)
+With Brantly Callaway, Scott Cunningham, Andrew Goodman-Bacon, and Pedro Sant'Anna
+[Arxiv](https://arxiv.org/pdf/2503.13323)
+
+**Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes** (2024)
+With Jonah B. Gelbach and Eric L. Talley
+[PDF](working_papers/ml_comp/paper.pdf) | [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4849281)
+
+**The Effects of Hedge Fund Activism** (2021)
+[PDF](working_papers/activism/Baker_JMP.pdf)
 
 ## Published Papers
 
-::: {#articles}
-:::
+**Statistical Learning Can Help the Judiciary Fulfill Its Gatekeeping Role Over Expert Witnesses** (2025)
+*Berkeley Business Law Journal* 2025
+[PDF](articles/bblj/Statistical%20Learning%20BBLJ.pdf)
+
+**Diversity Washing** (2024)
+With David F. Larcker, Charles G. McClure, Durgesh Saraph, and Edward M. Watts
+*Journal of Accounting Research* 2024
+[PDF](articles/diversity_washing/diversity_washing.pdf)
+
+**How Much Should We Trust Staggered Difference-in-Differences Estimates?** (2022)
+With David F. Larcker and Charles C.Y. Wang
+*Journal of Financial Economics* 22(2) 2022
+[PDF](articles/staggered_did/did.pdf) | [Code](https://github.com/andrewchbaker/JFE_DID)
+
+**Machine Learning and Predicted Returns for Event Studies in Securities Litigation** (2020)
+With Jonah B. Gelbach
+*Journal of Law, Finance, and Accounting* 5(2) 2020
+[PDF](articles/bagel/bagel.pdf) | [Code](https://github.com/andrewchbaker/BaGel)
+
+**Dual-Class Index Exclusion** (2019)
+With Andrew Winden
+*Virginia Law & Business Review* 13(2) 2019
+[PDF](articles/dual_class/bagel.pdf)
+
+**Single-Firm Event Studies, Securities Fraud, and Financial Crisis: Problems of Inference** (2016)
+*Stanford Law Review* 68 2016
+[PDF](articles/slr/2016_SLR_Note.pdf) | [Code](articles/slr/Codes.zip) | [Data](articles/slr/Data.zip)
