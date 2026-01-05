@@ -5,7 +5,7 @@ email: andrew.baker@berkeley.edu
 image: files/Baker-Portrait.jpg
 description: andrew.baker@berkeley.edu
 about:
-  template: trestles
+  template: broadside
 format:
   html: 
     page-layout: article
