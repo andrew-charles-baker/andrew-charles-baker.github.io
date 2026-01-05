@@ -1,22 +1,6 @@
 /* css styles */
 
-/* Research page styling */
-#quarto-document-content p {
-  margin-bottom: 0.5rem;
-}
-
-/* Add spacing between research papers */
-#quarto-document-content p + p strong:first-child {
-  margin-top: 1.5rem;
-  display: inline-block;
-}
-
-/* Style research page links in maroon/red color */
-#quarto-document-content a {
-  color: #8B0000;
-  text-decoration: none;
-}
-
-#quarto-document-content a:hover {
-  text-decoration: underline;
+/* Increase spacing before Education heading on about page */
+#quarto-document-content h2 {
+  margin-top: 2.5rem;
 }
