@@ -1,1 +1,6 @@
 /* css styles */
+
+/* Increase spacing before Education heading on about page */
+#quarto-document-content h2 {
+  margin-top: 2.5rem;
+}
