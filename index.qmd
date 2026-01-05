@@ -11,7 +11,7 @@ format:
     page-layout: article
 ---
 
-I am an Assistant Professor of Law at the University of California, Berkeley. My research interests include corporate governance, securities regulation, empirical legal studies, and law and economics/finance.
+I am an Assistant Professor of Law at the University of California, Berkeley. I research corporate governance, securities regulation, empirical legal studies, and law and economics/finance.
 
 ## Education
 
