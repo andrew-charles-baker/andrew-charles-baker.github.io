@@ -13,9 +13,8 @@ format:
 
 I am an Assistant Professor of Law at the University of California, Berkeley. My research interests include corporate governance, securities regulation, empirical legal studies, and law and economics/finance.
 
-
-
 ## Education
+
 **Stanford University** \| Stanford, CA\
 PhD in Business Administration \| 2021
 
