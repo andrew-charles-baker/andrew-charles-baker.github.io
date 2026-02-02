@@ -14,12 +14,12 @@ This version: 2025.
 
 **Difference-in-Differences Designs: A Practitioner's Guide**
 with Brantly Callaway, Scott Cunningham, Andrew Goodman-Bacon, and Pedro Sant'Anna
-This version: 2025.
+Forthcoming, *Journal of Economic Literature*.
 [[arXiv]](https://arxiv.org/pdf/2503.13323)
 
 **Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes**
 with Jonah B. Gelbach and Eric L. Talley
-This version: 2024.
+Forthcoming, *Journal of Corporation Law*.
 [[PDF]](working_papers/ml_comp/paper.pdf) [[SSRN]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4849281)
 
 **The Effects of Hedge Fund Activism**
