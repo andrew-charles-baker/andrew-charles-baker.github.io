@@ -12,7 +12,7 @@ author:
     affiliation: Opportunity and Inclusive Growth Institute, Federal Reserve Bank of Minneapolis
   - name: Pedro Sant'Anna
     affiliation: Emory University
-description: Working Paper
+description: Forthcoming, Journal of Economic Literature
 ---
 
 ## Links

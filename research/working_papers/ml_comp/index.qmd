@@ -8,7 +8,7 @@ author:
     affiliation: Berkeley Law School
   - name: Eric L. Talley
     affiliation: Columbia Law School
-description: Working Paper
+description: Forthcoming, Journal of Corporation Law
 ---
 
 ## Links
