@@ -18,6 +18,7 @@ description: Forthcoming, Journal of Economic Literature
 ## Links
 
 -   [Arxiv](https://arxiv.org/pdf/2503.13323)
+-   [Code](https://github.com/pedrohcgs/JEL-DiD)
 
 ## Abstract
 
