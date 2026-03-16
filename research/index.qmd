@@ -4,13 +4,11 @@ title: "Research"
 
 ## Working Papers
 
-**The Dubious Impact of State Antitakeover Provisions**, Revise and Resubmit, *Critical Finance Review*.  This version: 2025. [\[PDF\]](working_papers/antitakeover/antitakeover.pdf) [\[Code\]](https://github.com/andrewchbaker/State_Antitakeover)
+**The Dubious Impact of State Antitakeover Provisions**, Revise and Resubmit, *Critical Finance Review*. This version: 2025. [\[PDF\]](working_papers/antitakeover/antitakeover.pdf) [\[Code\]](https://github.com/andrewchbaker/State_Antitakeover)
 
 **Fixing the Law Review Submission Game** This version: 2025. [\[PDF\]](working_papers/law_review_matching/Matching%20Markets%20for%20Law%20Reviews.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102)
 
-**Difference-in-Differences Designs: A Practitioner's Guide** with Brantly Callaway, Scott Cunningham, Andrew Goodman-Bacon, and Pedro Sant'Anna, Forthcoming, *Journal of Economic Literature*. 
-[\[arXiv\]](https://arxiv.org/pdf/2503.13323)
-[\[Code\]](https://github.com/pedrohcgs/JEL-DiD)
+**Difference-in-Differences Designs: A Practitioner's Guide** with Brantly Callaway, Scott Cunningham, Andrew Goodman-Bacon, and Pedro Sant'Anna, Forthcoming, *Journal of Economic Literature*. [\[arXiv\]](https://arxiv.org/pdf/2503.13323) [\[Code\]](https://github.com/pedrohcgs/JEL-DiD)
 
 **Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes** with Jonah B. Gelbach and Eric L. Talley, Forthcoming, *Journal of Corporation Law*. [\[PDF\]](working_papers/ml_comp/paper.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4849281)
 
