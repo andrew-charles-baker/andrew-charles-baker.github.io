@@ -8,13 +8,21 @@ title: "Research"
 
 **Fixing the Law Review Submission Game** This version: 2025. [\[PDF\]](working_papers/law_review_matching/Matching%20Markets%20for%20Law%20Reviews.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102)
 
+<<<<<<< HEAD
 **Difference-in-Differences Designs: A Practitioner's Guide** with Brantly Callaway, Scott Cunningham, Andrew Goodman-Bacon, and Pedro Sant'Anna, Forthcoming, *Journal of Economic Literature*. [\[arXiv\]](https://arxiv.org/pdf/2503.13323) [\[Code\]](https://github.com/pedrohcgs/JEL-DiD)
 
+=======
+>>>>>>> 906c600 (Add in JEL as article)
 **Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes** with Jonah B. Gelbach and Eric L. Talley, Forthcoming, *Journal of Corporation Law*. [\[PDF\]](working_papers/ml_comp/paper.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4849281)
 
 **The Effects of Hedge Fund Activism** This version: 2021. [\[PDF\]](working_papers/activism/Baker_JMP.pdf)
 
 ## Published Papers
+
+**Difference-in-Differences Designs: A Practitioner's Guide** with Brantly Callaway, Scott Cunningham, Andrew Goodman-Bacon, and Pedro Sant'Anna, 2026, *Journal of Economic Literature*. 
+[\[Paper\]](articles/jel/DiD_JEL.pdf)
+[\[Github\]](https://github.com/pedrohcgs/JEL-DiD)
+[\[Code\]](artles/jel/JEL-DiD.zip)
 
 **Statistical Learning Can Help the Judiciary Fulfill Its Gatekeeping Role Over Expert Witnesses** *Berkeley Business Law Journal*, 2025. [\[PDF\]](articles/bblj/Statistical%20Learning%20BBLJ.pdf)
 
