@@ -19,6 +19,8 @@ website:
         text: "CV"
       - text: "Research"
         file: research/index.qmd
+      - text: "Posts"
+        href: posts/index.qmd
     right:
       - icon: linkedin
         href: https://linkedin.com/in/andrew-baker-09bb6326
