@@ -4,7 +4,7 @@ title: "Research"
 
 ## Working Papers
 
-**The Dubious Impact of State Antitakeover Provisions**, Revise and Resubmit, *Critical Finance Review*. This version: 2025. [\[PDF\]](working_papers/antitakeover/antitakeover.pdf) [\[Code\]](https://github.com/andrewchbaker/State_Antitakeover)
+**The Dubious Impact of State Antitakeover Provisions**, Conditional Accept, *Critical Finance Review*. This version: 2025. [\[PDF\]](working_papers/antitakeover/antitakeover.pdf) [\[Code\]](https://github.com/andrewchbaker/State_Antitakeover)
 
 **Fixing the Law Review Submission Game** This version: 2025. [\[PDF\]](working_papers/law_review_matching/Matching%20Markets%20for%20Law%20Reviews.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102)
 
