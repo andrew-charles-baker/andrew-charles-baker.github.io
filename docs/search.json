@@ -1,248 +1,24 @@
 [
   {
-    "objectID": "research/working_papers/activism/index.html",
-    "href": "research/working_papers/activism/index.html",
-    "title": "The Effects of Hedge Fund Activism",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Paper"
+    "text": "About this site"
   },
   {
-    "objectID": "research/working_papers/activism/index.html#links",
-    "href": "research/working_papers/activism/index.html#links",
-    "title": "The Effects of Hedge Fund Activism",
+    "objectID": "posts/antitakeover/index.html",
+    "href": "posts/antitakeover/index.html",
+    "title": "Do State Antitakeover Laws Actually Do Anything?",
     "section": "",
-    "text": "Paper"
+    "text": "My paper, The Dubious Impact of State Antitakeover Provisions, is now forthcoming in the Critical Finance Review. The paper is long and fairly technical, so I thought I would write up a shorter, more digestible version of the argument here. The one-sentence summary: a large empirical literature claims that state antitakeover laws changed how managers run their companies, but once you analyze the data with methods that take timing seriously, there is very little evidence that these laws did anything at all — which is exactly what corporate law scholars have been saying for decades.\n\nSome Background\nIn the 1980s, hostile takeovers were everywhere — think Barbarians at the Gate, corporate raiders, and junk bonds. State legislatures responded by passing laws designed to make hostile takeovers harder to pull off. These “second-generation” antitakeover statutes came in several flavors (business combination laws, fair price laws, control share acquisition laws, and others), but they shared a common goal: give the managers of a target company more power to block an unwanted acquirer. Since Ohio passed the first one in 1982, 43 states have adopted at least 157 of these laws.\nWhy do economists care? A foundational idea in corporate finance is that the threat of a hostile takeover disciplines managers. If you run your company poorly, someone can buy it out from under you and replace you. Take that threat away, and — the theory goes — managers get lazy, overpay themselves and their workers, hoard cash, and avoid hard decisions. Economists call this “managerial entrenchment,” and the classic paper in this literature is titled, memorably, “Enjoying the Quiet Life.”\nThe staggered adoption of antitakeover statutes looked like a gift to empirical researchers: dozens of state laws, passed at different times, that suddenly protected some firms but not others. That is a textbook setup for a “difference-in-differences” analysis — compare the change in outcomes at protected firms to the change at unprotected firms, and you get the causal effect of entrenchment. By one count, over 80 published papers have used these laws this way, and they have found significant effects on everything from wages to innovation to leverage.\n\n\n\nThe adoption of second-generation antitakeover laws across states of incorporation. Red means a law is in place. Adoption is staggered — but clustered in the mid-1980s and correlated across statute types within a state.\n\n\n\n\nThe Lawyers Object\nHere is the problem. Corporate law scholars have long argued that these statutes should not matter at all, because of a much more powerful defense: the poison pill. A poison pill lets a target company massively dilute any hostile acquirer’s stake, making a takeover prohibitively expensive. After the Delaware courts blessed the pill in 1985 (Moran v. Household International), any board could adopt one — and crucially, could adopt one in a single day, after a hostile bid showed up. Lawyers keep the paperwork sitting in a drawer.\nThis is the “shadow pill” argument: every firm is effectively protected by the pill it could adopt, whether or not it has adopted one. If the shadow pill already blocks any hostile bid, then a state law that also blocks hostile bids is legally redundant — like installing a second lock on a door that’s already welded shut. In an influential article, Catan and Kahan (2016) went through several of the best-known empirical papers and showed their results fell apart due to data and design flaws, concluding that “decades of empirical studies have yielded little empirical knowledge.”\nThe strongest response came from Karpoff and Wittry (2018) in the Journal of Finance. They agreed that many prior studies were flawed — you have to account for the legal and institutional context, like which other laws a firm was already covered by. But they pushed back hard on the claim that the laws are irrelevant, showing that business combination and poison pill laws remained statistically significant predictors of several firm outcomes even after adding all the institutional controls. Their paper has become the standard citation justifying continued use of these laws in empirical research.\nSo we were left at a standoff: the lawyers say the laws can’t matter, and the empiricists keep finding that they do. My paper asks whether the empirical methods themselves can explain the disagreement.\n\n\nWhat I Do\nKarpoff and Wittry generously shared their data and code, so I could start from exactly their published results and change one thing at a time. A few findings stood out.\nThe headline “short vs. full model” contrast is weaker than it looks. A centerpiece of their paper is that coefficients change once you control for institutional context. But when I bootstrap the difference between the two sets of coefficients, it is not statistically significant. This is the classic Gelman and Stern point: the difference between “significant” and “not significant” is not itself statistically significant.\n\n\n\nCoefficients from the short model, the full model, and (right panel) the bootstrapped difference between them. The differences are statistically insignificant, so it is not clear that the omitted variable bias / institutional controls argument is doing that much work.\n\n\nData quality is not the issue. I rebuilt the dataset from scratch to fix known problems with Compustat (which backfills a firm’s current state of incorporation into its entire history — a real problem when your treatment variable is defined by state of incorporation). Correcting the data barely changes anything. If anything, the standard regression results get slightly stronger. So the skeptics can’t win on data-quality grounds alone; the issue runs deeper.\nTiming is the issue. The standard approach collapses everything into a single before/after comparison. But a single “average effect” can hide wildly different patterns — including patterns that have nothing to do with the law. The figure below makes the point with a stylized example: all three columns produce the identical static difference-in-differences estimate. Only the first is consistent with the law causing the change. In the second, the entire difference appears before the law; in the third, the two groups were just on different trends all along.\n\n\n\nThree datasets, one identical difference-in-differences estimate. Only column (1) supports a causal story. This is why you should always look at the timing of effects, not just the before/after average.\n\n\nWhen I break the antitakeover estimates out by year relative to adoption — an “event study” — the timing frequently looks like columns (2) and (3), not column (1). Differences between covered and uncovered firms often show up before the laws pass, or don’t show up at all in the window around adoption.\nModern estimators finish the job. There is one more technical problem, and it is a big one. A recent econometrics literature (including some of my own earlier work) shows that when a policy rolls out across units at different times, the standard regression quietly uses already-treated firms as the comparison group for later-treated firms. If treatment effects change over time, this contaminates the estimate — it can shrink it, or even flip its sign. I re-estimate everything using two methods built to avoid this problem (stacked regressions and the Callaway–Sant’Anna estimator), and add formal sensitivity bounds (Rambachan–Roth) that ask whether the results would survive even modest violations of the “parallel trends” assumption.\nThe answer: across all fourteen combinations of outcome and statute — seven firm outcomes, for both business combination and poison pill laws — not a single estimated effect survives. Here is the full grid for business combination laws, the workhorse of the literature. The estimates hug zero.\n\n\n\nEvent study estimates for business combination laws using the Callaway–Sant’Anna estimator, across seven outcomes (rows) and three specifications (columns). There is no consistent evidence that anything changed when the laws passed.\n\n\nAnd here is a telling detail: the handful of results that come closest to surviving point the wrong way. The most robust-looking pattern is that “entrenchment” is followed by higher leverage — the opposite of what agency theory predicts, since debt is supposed to be a discipline device that insulated managers would shed.\n\n\nIs This Just an Underpowered Non-Result?\nA fair question about any null result is whether the design simply lacked the power to detect true effects. I address this directly by computing minimum detectable effects: the designs here could reliably detect effects larger than roughly 0.05 to 0.21 standard deviations, depending on the outcome. That is adequate power for economically meaningful entrenchment effects — and none were found. What the designs cannot do is adjudicate effects as small as the ones in Karpoff and Wittry’s full model (two to seven hundredths of a standard deviation). But if the true effects are that small, it is hard to argue these laws meaningfully changed managerial behavior — and effects of that size cannot be credibly estimated with firm-level panel data in any case.\n\n\nWhy This Matters\nOn the narrow question, the paper supports the corporate law scholars: second-generation antitakeover statutes appear to be redundant in the shadow of the poison pill, and the large empirical literature built on them rests on a research design that does not hold up. There is also a doctrinal reason to expect exactly this. These statutes only bind transactions the target’s board doesn’t approve — and a board that wants a deal to go through can waive them, just as it can redeem a pill. It is hard to see why a defense the board can switch off at will would change how managers behave.\nThe broader lesson goes beyond takeover law. “Natural experiments” from staggered law adoption are everywhere in empirical finance, accounting, and legal studies, and for years the standard toolkit produced a stream of statistically significant results from this setting that, on closer inspection, aren’t there. When dozens of papers find effects using a setting where the underlying legal mechanism shouldn’t work, the right response is not to average the findings — it’s to scrutinize the method.\nNone of this means corporate governance doesn’t matter, or that the balance of power between managers and shareholders is unimportant. It means these particular laws are the wrong laboratory for studying it. For researchers looking for a better one, the paper’s conclusion suggests a candidate: Delaware’s 2025 Senate Bill 21, which shifted power back toward managers and controllers for Delaware firms, may offer a cleaner shock for the next generation of this research.\nIf you want the full details, the paper is here, and the code is on GitHub."
   },
   {
-    "objectID": "research/working_papers/activism/index.html#abstract",
-    "href": "research/working_papers/activism/index.html#abstract",
-    "title": "The Effects of Hedge Fund Activism",
-    "section": "Abstract",
-    "text": "Abstract\nIn this paper I explore the relationship between the rise of hedge fund activism and firm outcomes, using a study design that explicitly takes into account how activists pick their targets. Contrary to much prior work, I find no evidence that activism is associated with increased firm operating performance or significant long-term returns once comparing to firms based on their similarity to the targets. However, activism does increase firm payouts to shareholders and decreases investment, consistent with the argument of many critics of activism. I also find that firm-level employment declines significantly following a targeting event, and that the subset of firms that experience an increase in operating performance also engage in higher levels of tax avoidance. The deregulation of proxy access rules, wholesale de-staggering of corporate boards, and the rise in importance of proxy advisory firms who frequently recommend voting for activist proposals have made firms more susceptible to aggressive activism over the past three decades. The results in this paper, coupled with the rhetorical shift in focus from short-term profits to sustainable growth by large institutional investors, suggest a re-framing of the public debate over the benefits of shareholder activism."
-  },
-  {
-    "objectID": "research/working_papers/activism/index.html#important-figure",
-    "href": "research/working_papers/activism/index.html#important-figure",
-    "title": "The Effects of Hedge Fund Activism",
-    "section": "Important figure",
-    "text": "Important figure\nFigure 11 reports the average long-term buy-and-hold abnormal returns for the targeted  rms in our sample with its 95% confidence interval (in blue), as well as the average of the propensity-score weighted comparison returns for each target (in red). Panel (a) presents the results for  rms that are taken over within the five years following the event or pseudo-event, and Panel (b) reports the results for firms that are not taken over during this period.\n\n\n\nFigure 1"
-  },
-  {
-    "objectID": "research/working_papers/law_review_matching/index.html",
-    "href": "research/working_papers/law_review_matching/index.html",
-    "title": "Fixing the Law Review Submission Game",
+    "objectID": "posts/ai_existential_risk/index.html",
+    "href": "posts/ai_existential_risk/index.html",
+    "title": "AI and Existential Risk",
     "section": "",
-    "text": "Paper\nSSRN"
-  },
-  {
-    "objectID": "research/working_papers/law_review_matching/index.html#links",
-    "href": "research/working_papers/law_review_matching/index.html#links",
-    "title": "Fixing the Law Review Submission Game",
-    "section": "",
-    "text": "Paper\nSSRN"
-  },
-  {
-    "objectID": "research/working_papers/law_review_matching/index.html#abstract",
-    "href": "research/working_papers/law_review_matching/index.html#abstract",
-    "title": "Fixing the Law Review Submission Game",
-    "section": "Abstract",
-    "text": "Abstract\nEvery spring and fall, thousands of manuscripts fill the inboxes of student-run law reviews across the country during submission periods. The process quickly deteriorates into a frantic cycle of offers, requests for expedited decisions, and rejections. Authors who receive an offer immediately seek to parlay it into something “better”, quickly reaching out to notionally more prestigious journals to climb the publishing ladder. Student editors, inundated with submissions, are pressured to act quickly—sometimes within hours—on articles that they have clearly only had the time to skim. This unique system of publishing has its merits; while formal peer review in other disciplines has extended the time from submission to publication to multiple years, law professors are able to write and publish an article, with a full audit of citations, in a matter of months. However, a consensus has developed that stress on the system has tipped the balance of costs to exceed the benefits. The system of publishing American legal scholarship has become less a mechanism for identifying high-quality work than a repeated game of brinkmanship.\nThe contours of this system produce unacceptable burdens and inequities to both students and faculty. Student editors are deluged with submissions, often numbering in the thousands per cycle, something that academics themselves would never countenance. Editors inevitably resort to using proxies—author credentials, institutional affiliation, or existing offers from peer journals—as substitutes for meaningful review. Journals perceived to be lower-ranked shoulder a disproportionate burden, as they screen manuscripts that higher-ranked journals steal through expedited consideration. Authors feel forced to play the expedite game or risk being left behind, producing behavior that, while rational in the moment, is clearly distasteful with hindsight. This system distributes labor inefficiently, undermines careful editorial evaluation, perpetuates status inequities in the academy, and wastes enormous amounts of unpaid student time. In economic terms, the law review submissions market suffers from a textbook case of congestion and market failure.\nThis Article offers a new approach. Drawing on insights from economics and operations management, and the successful use of centralized matching in other two-sided markets, we propose redesigning the law review submission process as a coordinated matching market. In such a system, authors and journals would submit ranked preferences, and a deferred-acceptance algorithm would generate stable matches. This structure eliminates the offer-and-expedite game, distributes the burdens of review more evenly across journals, and gives both authors and editors greater predictability. Unlike prior reforms, it targets the systemic source of inefficiency: the misaligned incentives of decentralized submissions and ad hoc expedite requests. By replacing a chaotic bargaining game with a centralized matching mechanism, the law review system could become more equitable, more efficient, and ultimately more conducive to high-quality scholarship."
-  },
-  {
-    "objectID": "research/working_papers/antitakeover/index.html",
-    "href": "research/working_papers/antitakeover/index.html",
-    "title": "The Dubious Impact of State Antitakeover Provisions",
-    "section": "",
-    "text": "Paper\nCode"
-  },
-  {
-    "objectID": "research/working_papers/antitakeover/index.html#links",
-    "href": "research/working_papers/antitakeover/index.html#links",
-    "title": "The Dubious Impact of State Antitakeover Provisions",
-    "section": "",
-    "text": "Paper\nCode"
-  },
-  {
-    "objectID": "research/working_papers/antitakeover/index.html#abstract",
-    "href": "research/working_papers/antitakeover/index.html#abstract",
-    "title": "The Dubious Impact of State Antitakeover Provisions",
-    "section": "Abstract",
-    "text": "Abstract\nCorporate governance scholars have engaged in a longstanding debate over the impact of state antitakeover provisions. Corporate law practitioners and researchers argue that the affirmation of the “poison pill” made the second generation of antitakeover statutes redundant, while empirical scholars in corporate finance continue to find wide-ranging impacts from their adoption. This paper subjects the standard approach used in the empirical literature to a series of straightforward extensions using current best practice in panel data analysis. Contrary to the majority of published research, there is scant evidence for a consistent and reliable impact of antitakeover statute adoption on firm activity. These findings follow logically from the legal argument that takeover statutes provide little additional takeover deterrence in the presence of a “shadow pill.”"
-  },
-  {
-    "objectID": "research/working_papers/antitakeover/index.html#important-figure",
-    "href": "research/working_papers/antitakeover/index.html#important-figure",
-    "title": "The Dubious Impact of State Antitakeover Provisions",
-    "section": "Important figure",
-    "text": "Important figure\n\n\n\nFigure 3"
-  },
-  {
-    "objectID": "research/working_papers/ml_comp/index.html",
-    "href": "research/working_papers/ml_comp/index.html",
-    "title": "Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes",
-    "section": "",
-    "text": "Paper\nSSRN"
-  },
-  {
-    "objectID": "research/working_papers/ml_comp/index.html#links",
-    "href": "research/working_papers/ml_comp/index.html#links",
-    "title": "Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes",
-    "section": "",
-    "text": "Paper\nSSRN"
-  },
-  {
-    "objectID": "research/working_papers/ml_comp/index.html#abstract",
-    "href": "research/working_papers/ml_comp/index.html#abstract",
-    "title": "Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes",
-    "section": "Abstract",
-    "text": "Abstract\nThis paper challenges conventional methods used in financial valuation across areas in litigation practice. We use a large-scale empirical simulation, using real firm data, to demonstrate that the widely used “comparable companies” approach allows enormous expert discretion, which enables substantial inconsistency and subjective judgment in court valuations. We then use the same simulation approach to show that using better data choices together with contemporary penalized regression methods generates valuation estimates that are considerably less variable, thereby reducing the scope for expert bias. We also apply this approach to a recent Delaware valuation dispute. This paper should transform financial valuation practice in litigation by both diagnosing and offering a cure for excessive discretion and variability in valuation disputes. Our methods would lead to better performing and more empirically grounded outcomes in legal disputes involving valuation, thus enhancing the fairness and efficiency of the judicial processes in valuation litigation."
-  },
-  {
-    "objectID": "research/working_papers/ml_comp/index.html#important-figure",
-    "href": "research/working_papers/ml_comp/index.html#important-figure",
-    "title": "Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes",
-    "section": "Important figure",
-    "text": "Important figure\nThis figure reports the valuation estimates for Landstar \\(d^*\\) = 43 trading days after the end of 2017 Q4 using different input combinations. The top panel plots the estimated market value from each of the 24 combinations, which are represented by the grey tiles in the lower panel. The combinations vary based on the choice of matching feature set, number of matches, distance measure, and summary measure.\n\n\n\nFigure 1"
-  },
-  {
-    "objectID": "research/articles/bagel/index.html",
-    "href": "research/articles/bagel/index.html",
-    "title": "Machine Learning and Predicted Returns for Event Studies in Securities Litigation",
-    "section": "",
-    "text": "Paper\nCode"
-  },
-  {
-    "objectID": "research/articles/bagel/index.html#links",
-    "href": "research/articles/bagel/index.html#links",
-    "title": "Machine Learning and Predicted Returns for Event Studies in Securities Litigation",
-    "section": "",
-    "text": "Paper\nCode"
-  },
-  {
-    "objectID": "research/articles/bagel/index.html#abstract",
-    "href": "research/articles/bagel/index.html#abstract",
-    "title": "Machine Learning and Predicted Returns for Event Studies in Securities Litigation",
-    "section": "Abstract",
-    "text": "Abstract\nWe investigate the use of machine learning (ML) and other robust estimation techniques in event studies conducted on single securities for the purpose of securities litigation. Single-firm event studies are widely used in civil litigation, with billions of dollars in settlements hinging on the outcome of the exercise. We find that regularization (equivalently, penalized estimation) can yield noticeable improvements in both the variance of event-date abnormal returns and significance-test power. Thus we believe that there is a role for ML methods in event studies used in securities litigation. At the same time, we find that ML-induced performance improvements are smaller than those based on other good practices. Most important are (i) the use of a peer index based on returns for firms in similar industries (how this is computed appears to be less important than that some version be included), and (ii) for significance testing, using the SQ test proposed in Gelbach et al. (2013), because it is robust to the considerable non-normality present in abnormal returns."
-  },
-  {
-    "objectID": "research/articles/bagel/index.html#important-figure",
-    "href": "research/articles/bagel/index.html#important-figure",
-    "title": "Machine Learning and Predicted Returns for Event Studies in Securities Litigation",
-    "section": "Important figure",
-    "text": "Important figure\nFigure 1 plots specification ranks. Each specification has 8 MSE performance values: two time periods (1999–2009 vs. 2009–2019), with and without the FFC factors, and two MSE normalization approaches (\\(\\widehat{R}_{oos}^{k}\\) and \\(\\widehat{R}_{het}^k\\), described below). Each gray dot represents a rank from 1 to 11, and each rank is represented once for each of the eight time-period/FFC-factor/MSE metric combinations. The diamonds plot the specifications’ average ranks. Blue diamonds signify models that allow firms to enter the regression function individually and use cross-validation and penalized regression; red diamonds represent specifications that do not.\n\n\n\nFigure 1\n\n\n@article{baker2020machine,\n  title={Machine learning and predicted returns for event studies in securities litigation},\n  author={Baker, Andrew and Gelbach, Jonah B and others},\n  journal={Journal of Law, Finance, and Accounting},\n  volume={5},\n  number={2},\n  pages={231--272},\n  year={2020},\n  publisher={Now Publishers, Inc.}\n}"
-  },
-  {
-    "objectID": "research/articles/dual_class/index.html",
-    "href": "research/articles/dual_class/index.html",
-    "title": "Dual-Class Index Exclusion",
-    "section": "",
-    "text": "Paper"
-  },
-  {
-    "objectID": "research/articles/dual_class/index.html#links",
-    "href": "research/articles/dual_class/index.html#links",
-    "title": "Dual-Class Index Exclusion",
-    "section": "",
-    "text": "Paper"
-  },
-  {
-    "objectID": "research/articles/dual_class/index.html#abstract",
-    "href": "research/articles/dual_class/index.html#abstract",
-    "title": "Dual-Class Index Exclusion",
-    "section": "Abstract",
-    "text": "Abstract\nOne of the most contentious and long-standing debates in corporate governance is whether company founders and other insiders should be permitted to use multi-class stock structures with unequal votes to control their companies while seeking capital through a public listing. Stymied by the permissive attitudes of legislatures and regulators, institutional investors opposed to multi-class arrangements recently turned to a new potential source of regulation: benchmark equity index providers. At the behest of institutional investors, the three largest index providers recently changed the eligibility requirements for their benchmark equity indexes to exclude, limit or underweight companies with multi-class stock structures. Investors expected the prospect of exclusion from such indexes to discourage founders and directors from adopting dual-class stock structures in connection with their initial public offerings.\nWhile there is a voluminous financial literature on the effects of index inclusion and exclusion on stock prices, and legal scholars have recently explored the corporate governance implications of the exponential growth of passive index investing, focusing primarily on the incentives of index fund asset managers, neither the financial nor the legal literature have considered the corporate governance role and influence of the parties who write the rules for index investing: the index providers. We begin to fill this gap in the literature by assessing the efficacy of index providers as corporate governance arbiters through the rubric of their dual-class index exclusion decisions.\nWe start with the premise that the index exclusion sanction will not discourage dual-class listings unless it is sufficiently costly to outweigh the perceived benefits of founder control through a multi-class stock structure. We expect the index exclusion sanction will not be sufficiently costly for several reasons. First, it is difficult, if not impossible, to implement a sanction through the public capital markets. Second, the index inclusion effect on which the anticipated sanction is premised has effectively disappeared in recent years and may never have been a long-term source of lower capital costs. Third, despite the explosive growth of index investing in recent years, funds following stock indexes still hold a relatively modest percentage of the market capitalization of U.S. equities – around 12% according to BlackRock. Finally, the proliferation of index investing opportunities has weakened the market-moving influence of any one benchmark index.\nTo test the efficacy of the sanction, we conduct an event study of the S&P announcement that dual-class companies would henceforth be excluded from the S&P 1500 Composite Index and its components – the S&P 500, S&P 400 mid-cap and S&P 600 small-cap indices. Because S&P grandfathered dual-class companies currently in the index, we are able to compare movements in the stock prices of dual-class companies currently in the index with movements in the stock prices of dual-class companies not yet included in the index at the time of announcement. We do not observe any statistically significant abnormal returns in the stock prices of either included or excluded firms as a result of the S&P announcement, suggesting that exclusion is not expected to have a significant adverse cost of capital effect on firms that elect to list with a dual-class stock structures in the future and the sanction is ineffective. In the absence of an effective sanction, the exclusion of dual-class shares from benchmark equity indexes will not affect corporate governance choices. It may, however, have material adverse consequences for index investors and the index providers themselves."
-  },
-  {
-    "objectID": "research/articles/dual_class/index.html#important-figure",
-    "href": "research/articles/dual_class/index.html#important-figure",
-    "title": "Dual-Class Index Exclusion",
-    "section": "Important figure",
-    "text": "Important figure\n\n\n\nFigure 1\n\n\n@article{winden2019dual,\n  title={Dual-Class Index Exclusion},\n  author={Winden, Andrew and Baker, Andrew},\n  journal={Va. L. \\& Bus. Rev.},\n  volume={13},\n  pages={101},\n  year={2019},\n  publisher={HeinOnline}\n}"
-  },
-  {
-    "objectID": "research/articles/diversity_washing/index.html",
-    "href": "research/articles/diversity_washing/index.html",
-    "title": "Diversity Washing",
-    "section": "",
-    "text": "Paper"
-  },
-  {
-    "objectID": "research/articles/diversity_washing/index.html#paper",
-    "href": "research/articles/diversity_washing/index.html#paper",
-    "title": "Diversity Washing",
-    "section": "",
-    "text": "Paper"
-  },
-  {
-    "objectID": "research/articles/diversity_washing/index.html#abstract",
-    "href": "research/articles/diversity_washing/index.html#abstract",
-    "title": "Diversity Washing",
-    "section": "Abstract",
-    "text": "Abstract\nWe provide large-sample evidence on whether U.S. publicly traded corporations use voluntary disclosures about their commitments to employee diversity opportunistically. We document significant discrepancies between companies’ external stances on diversity, equity, and inclusion (DEI) and their hiring practices. Firms that discuss DEI excessively relative to their actual employee gender and racial diversity (“diversity washers”) obtain superior scores from environmental, social, and governance (ESG) rating organizations and attract more investment from institutional investors with an ESG focus. These outcomes occur even though diversity-washing firms are more likely to incur discrimination violations and have negative human-capital-related news events. Our study provides evidence consistent with growing allegations of misleading statements from firms about their DEI initiatives and highlights the potential consequences of selective ESG disclosures."
-  },
-  {
-    "objectID": "research/articles/diversity_washing/index.html#important-figure",
-    "href": "research/articles/diversity_washing/index.html#important-figure",
-    "title": "Diversity Washing",
-    "section": "Important figure",
-    "text": "Important figure\nFigure 5: Nonparametric summary of ESG outcomes by DEI discussion and diversity ranks. This figure presents the average of Refinitiv’s Overall Score (panel A), Refinitiv’s Social Score (panel B), Sustainalytics Overall Score (panel C), Sustainalytics Social Score (panel D), Ownership by US SIF funds (panel E), and Ownership by ESG funds, based on the fund name (panel F). Each heat map is broken down by the decile of DEI discussion (measured by the overall amount of DEI discussion in our corpus of SEC documents) and the decile of underlying diversity (measured by the percentage of a firm’s U.S.-based workforce that is either female or non-white)\n\n\n\nFigure 5\n\n\n@article{baker2022diversity,\n  title={Diversity washing},\n  author={Baker, Andrew C and Larcker, David F and McCLURE, CHARLES G and Saraph, Durgesh and Watts, Edward M},\n  journal={Journal of Accounting Research},\n  year={2022},\n  publisher={Wiley Online Library}\n}"
-  },
-  {
-    "objectID": "research/articles/staggered_did/index.html",
-    "href": "research/articles/staggered_did/index.html",
-    "title": "How Much Should We Trust Staggered Difference-in-Differences Estimates?",
-    "section": "",
-    "text": "Paper\nCode"
-  },
-  {
-    "objectID": "research/articles/staggered_did/index.html#links",
-    "href": "research/articles/staggered_did/index.html#links",
-    "title": "How Much Should We Trust Staggered Difference-in-Differences Estimates?",
-    "section": "",
-    "text": "Paper\nCode"
-  },
-  {
-    "objectID": "research/articles/staggered_did/index.html#abstract",
-    "href": "research/articles/staggered_did/index.html#abstract",
-    "title": "How Much Should We Trust Staggered Difference-in-Differences Estimates?",
-    "section": "Abstract",
-    "text": "Abstract\nWe explain when and how staggered difference-in-differences regression estimators, commonly applied to assess the impact of policy changes, are biased. These biases are likely to be relevant for a large portion of research settings in finance, accounting, and law that rely on staggered treatment timing, and can result in Type-I and Type-II errors. We summarize three alternative estimators developed in the econometrics and applied literature for addressing these biases, including their differences and tradeoffs. We apply these estimators to re-examine prior published results and show, in many cases, the alternative causal estimates or inferences differ substantially from prior papers."
-  },
-  {
-    "objectID": "research/articles/staggered_did/index.html#important-figure",
-    "href": "research/articles/staggered_did/index.html#important-figure",
-    "title": "How Much Should We Trust Staggered Difference-in-Differences Estimates?",
-    "section": "Important figure",
-    "text": "Important figure\nThe top panel of Fig. 3 illustrates the diagnostic test for Simulations 4, 5, and 6. Because the diagnostic test only applies to balanced panels, in constructing this figure our simulation is modified to artificially induce a balanced panel of firm-year observations from Compustat before drawing fixed effects and residuals from the empirical distribution.\n\n\n\nFigure 3\n\n\n@article{baker2022much,\n  title={How much should we trust staggered difference-in-differences estimates?},\n  author={Baker, Andrew C and Larcker, David F and Wang, Charles CY},\n  journal={Journal of Financial Economics},\n  volume={144},\n  number={2},\n  pages={370--395},\n  year={2022},\n  publisher={Elsevier}\n}"
-  },
-  {
-    "objectID": "research/articles/slr/index.html",
-    "href": "research/articles/slr/index.html",
-    "title": "Single-Firm Event Studies, Securities Fraud, and Financial Crisis: Problems of Inference",
-    "section": "",
-    "text": "Paper\nCode\nData"
-  },
-  {
-    "objectID": "research/articles/slr/index.html#links",
-    "href": "research/articles/slr/index.html#links",
-    "title": "Single-Firm Event Studies, Securities Fraud, and Financial Crisis: Problems of Inference",
-    "section": "",
-    "text": "Paper\nCode\nData"
-  },
-  {
-    "objectID": "research/articles/slr/index.html#abstract",
-    "href": "research/articles/slr/index.html#abstract",
-    "title": "Single-Firm Event Studies, Securities Fraud, and Financial Crisis: Problems of Inference",
-    "section": "Abstract",
-    "text": "Abstract\nLawsuits brought pursuant to section 10(b) of the Securities and Exchange Act depend on the reliability of a statistical tool called an event study to adjudicate issues of reliance, materiality, loss causation, and damages. Although judicial acceptance of the event study technique is pervasive, there has been little empirical analysis of the ability of event studies to produce reliable results when applied to a single company’s security.\nUsing data from the recent financial crisis, this Note demonstrates that the standard-model event study used in most court proceedings can lead to biased inferences sanctioned through the Daubert standard of admissibility for expert testimony. In particular, in the presence of broad market volatility, a base event study will cause too many returns to be identified as statistically significant. Even recently proposed variations of the event study model specifically designed to address violations of the statistical assumptions of an event study will not completely correct this bias.\nThis Note proposes two alternative forms of event studies that are capable of creating statistically reliable results and should be adopted by courts in instances where there is cause to believe that market volatility has increased. Over previous decades, the judiciary has steadily moved toward a reliance on empirics and expert testimony in overseeing complex civil cases. Yet there has been surprisingly little research accompanying this judicial deference on the ability of statistical evidence to produce the promised result. This Note calls into question whether this movement has been beneficial from a logical or empirical perspective, but it demonstrates that alternative techniques that can aid the finder of fact in resolving these disputes—regardless of market trends—may in fact exist."
-  },
-  {
-    "objectID": "research/articles/slr/index.html#important-figure",
-    "href": "research/articles/slr/index.html#important-figure",
-    "title": "Single-Firm Event Studies, Securities Fraud, and Financial Crisis: Problems of Inference",
-    "section": "Important figure",
-    "text": "Important figure\n\n\n\nFigure 3\n\n\n@article{baker2016single,\n  title={Single-firm event studies, securities fraud, and financial crisis: problems of inference},\n  author={Baker, Andrew C},\n  journal={Stan. L. Rev.},\n  volume={68},\n  pages={1207},\n  year={2016},\n  publisher={HeinOnline}\n}"
+    "text": "Setting\nRecently, Anthropic hired Chad Jones to join the Anthropic Institute. (Side note - although I got my PhD at Stanford GSB I never met him, and from everything I have heard he is a very nice and smart person.) A blog post notes the hire was likely driven by his work on the tradeoff between AI innovation and existential risks. The post goes on to state:\n\n\n\n\n\nI shot off a post on LinkedIn arguing that this hire didn’t make a ton of sense to me.\n\n\n\n\n\nMy post was then picked up by the FT in an article, and led to many heated text messages. In this blog post I’ll clarify my point.\n\n\nGovernance Puzzle\nAs reflected in my Linkedin post, I’m primarily confused by the strategy from Anthropic. I study corporate governance and how firms signal to the market, and I thought this was a weird hire for obvious reasons.\nAs most people probably know, the federal government recently forced Anthropic to take its leading Mythos model off the market due to safety concerns. According to The Verge, “The company sprang into action immediately, sending a barrage of executives to Washington, DC. But updates have been suspiciously lacking, with no resolution in sight.” The article goes on to further explain that “Anthropic needs the revenue from Mythos to pay for all the compute it’s secured recently, including a deal to pay SpaceX $15 billion per year for access to its data centers, as well as its public image before the IPO. Two of Anthropic’s largest current shareholders — Google and Amazon — have tried to carefully stay on Trump’s good side, so they’re likely not happy either.”\nFrom my perspective, it is odd for a company trying to convince the government that they don’t pose unnecessary safety risks to do this hire at this time. I’m not even saying it’s bad that they made the hire, but that it’s puzzling from a corporate governance perspective. Here is Chad in his own words discussing existential risk and Mythos in an interview (I’m doing long excerpts to not be accused of misrepresenting his views):\n  \nIt’s an interesting interview, and he comes off as well-informed and thoughtful. Having said that, were I holding valuable private placement shares at Anthropic, I wouldn’t be happy about their new hire arguing that Mythos may be pushing the world to the “already there” point of doing “enormous harm to the economy and to people.” Coupled with his toy model showing how the implied tradeoff from classical economic models might allow a good deal of risk-seeking over extinction with standard utility functions, it didn’t make a ton of sense to me if your message is supposed to be “nothing to worry about here because of us”.\n\n\nThe Merits\nMoving on from my confusion over the corporate governance/strategy play, let’s (very briefly) touch on the merits of his argument. I want to clarify a couple things at the outset. Again, from everything that I’ve heard from people who know him, Chad is a great economist, solid mentor/advisor, good person. I think what he did was take a simple model and show how the tradeoffs play out within a standard economic framework.\nMy argument isn’t against this paper per se. As the paper notes, “The goal of the paper is not to provide an exact answer to this question, as the answer will surely depend on parameters that we cannot precisely quantify. Instead, the paper develops some simple models to elucidate the economic forces that are involved.” I just don’t think that it is a question merely of the parameters chosen, but demonstrative of the limitations of the framework itself.\nI have long argued, privately and publicly, that the economic utilitarian framework for doing welfare analysis has severe limitations, which are usually acknowledged and hand-waived away. A friend and colleague accused me of “anti-intellectualism” on this today, which I disagree with, so let me briefly lay out my claim.\nUnder the hood of this model is a need to map choices to utils, and this gets done by plugging in a value of a statistical life. We use compensating differentials (e.g. how much more do you have to get paid to work at Plant A over Plant B to compensate you for the increased fatality rate at Plant A) to impute how much folks implicitly value their life. We then use that number to calculate costs and benefits of e.g. proposed regulations. This is also central to the innovation / risk tradeoff in this paper.\nFirst, I don’t think people generally make this tradeoff either implicitly or explicitly when doing tasks like choosing a career. Sure, it gives you a number, but not necessarily a number that you would want to use for calculating tradeoffs. Moreover, it is not clear why, even if this were a good measure of how someone values their own life, it should be how a social planner (standing in for society) need value said person’s life. None of this is new or novel, and in addition to VSL there is longstanding philosophical work noting the limitations to pure utilitarianism. Chad understands these arguments, and briefly discusses them in his Discussion section:\n\n\n\n\n\nWhile philosophers may consider the total utilitarian perspective worthy of attention, I’m pretty sure it is not the dominant philosophical paradigm for thinking through such choices today.\nThe frequent retort is that “it takes a model to beat a model” and that, even if VSL is flawed, what is the alternative? My view, which may well be anti-intellectual, is to acknowledge the difficulty of the question, and that the answer cannot and will not ever be reduced to plugging in numbers to a social planner function. These are moral considerations that require society to decide how tradeoffs can and should be made, while accepting deep uncertainty and often intractable moral considerations.\nTo put it more simply, the standard economic approach, despite being a “formal framework” doesn’t provide more than the “vibes and anecdotes” that our policymakers currently receive. While economists frequently argue that they are alone in seriously thinking about tradeoffs, this isn’t true in my experience. People make tradeoffs all the time without having to reduce the question to a single dimension.\n\n\nIn Conclusion\nI’m probably sorry to have kick-started this discussion, but maybe it will prove fruitful.\nIn the paper a social planner with log utility would exchange a 1/3 risk of extinction for 55 factor increase in consumption, which Chad finds to be “remarkably unconcerned with existential risk.” Models with bounded “standard utility functions [that] we use frequently in a variety of applications in economics” are more conservative with regards to existential risk. The model is then “extended to include a richer theory of dynamics, the possibility of singularity, and the prospect that AI innovations extend life expectancy.” If AI also extends life expectancy, or makes gains “in the same units”, we avoid the need to deal with the thorny issue of converting lives to dollars.\nHere, even with “with a future-oriented focus that comes from low discounting, AI-induced mortality reductions can make large existential risks bearable.” Society always contains some level of risk, and progress requires acknowledging inherent tradeoffs with safety, but I find it impossible to justify accepting “large existential risks” to the only sentient life in the known universe.\nIt is important to situate this discussion within the current debate. As the paper notes, “[a] substantial contingent of the AI community, including leading researchers at OpenAI and Google, warn that these advances could constitute an existential risk for humanity.” Despite these concerns, the leading hyperscalars are all competing to achieve the singularity. Everything in the paper is perfectly acceptable for academic work, and worthy of academic debate, but I am concerned about what it means for society to have these justifications for bearing extinction risk coming from the companies creating and profiting from the risk."
   },
   {
     "objectID": "research/articles/bblj/index.html",
@@ -273,6 +49,251 @@
     "text": "Important figure\nThis figure shows the number of hits from the Google Scholar “Cases” database for “expert report” over time.\n\n\n\nFigure 1"
   },
   {
+    "objectID": "research/articles/staggered_did/index.html",
+    "href": "research/articles/staggered_did/index.html",
+    "title": "How Much Should We Trust Staggered Difference-in-Differences Estimates?",
+    "section": "",
+    "text": "Paper\nCode"
+  },
+  {
+    "objectID": "research/articles/staggered_did/index.html#links",
+    "href": "research/articles/staggered_did/index.html#links",
+    "title": "How Much Should We Trust Staggered Difference-in-Differences Estimates?",
+    "section": "",
+    "text": "Paper\nCode"
+  },
+  {
+    "objectID": "research/articles/staggered_did/index.html#abstract",
+    "href": "research/articles/staggered_did/index.html#abstract",
+    "title": "How Much Should We Trust Staggered Difference-in-Differences Estimates?",
+    "section": "Abstract",
+    "text": "Abstract\nWe explain when and how staggered difference-in-differences regression estimators, commonly applied to assess the impact of policy changes, are biased. These biases are likely to be relevant for a large portion of research settings in finance, accounting, and law that rely on staggered treatment timing, and can result in Type-I and Type-II errors. We summarize three alternative estimators developed in the econometrics and applied literature for addressing these biases, including their differences and tradeoffs. We apply these estimators to re-examine prior published results and show, in many cases, the alternative causal estimates or inferences differ substantially from prior papers."
+  },
+  {
+    "objectID": "research/articles/staggered_did/index.html#important-figure",
+    "href": "research/articles/staggered_did/index.html#important-figure",
+    "title": "How Much Should We Trust Staggered Difference-in-Differences Estimates?",
+    "section": "Important figure",
+    "text": "Important figure\nThe top panel of Fig. 3 illustrates the diagnostic test for Simulations 4, 5, and 6. Because the diagnostic test only applies to balanced panels, in constructing this figure our simulation is modified to artificially induce a balanced panel of firm-year observations from Compustat before drawing fixed effects and residuals from the empirical distribution.\n\n\n\nFigure 3\n\n\n@article{baker2022much,\n  title={How much should we trust staggered difference-in-differences estimates?},\n  author={Baker, Andrew C and Larcker, David F and Wang, Charles CY},\n  journal={Journal of Financial Economics},\n  volume={144},\n  number={2},\n  pages={370--395},\n  year={2022},\n  publisher={Elsevier}\n}"
+  },
+  {
+    "objectID": "research/articles/dual_class/index.html",
+    "href": "research/articles/dual_class/index.html",
+    "title": "Dual-Class Index Exclusion",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/articles/dual_class/index.html#links",
+    "href": "research/articles/dual_class/index.html#links",
+    "title": "Dual-Class Index Exclusion",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/articles/dual_class/index.html#abstract",
+    "href": "research/articles/dual_class/index.html#abstract",
+    "title": "Dual-Class Index Exclusion",
+    "section": "Abstract",
+    "text": "Abstract\nOne of the most contentious and long-standing debates in corporate governance is whether company founders and other insiders should be permitted to use multi-class stock structures with unequal votes to control their companies while seeking capital through a public listing. Stymied by the permissive attitudes of legislatures and regulators, institutional investors opposed to multi-class arrangements recently turned to a new potential source of regulation: benchmark equity index providers. At the behest of institutional investors, the three largest index providers recently changed the eligibility requirements for their benchmark equity indexes to exclude, limit or underweight companies with multi-class stock structures. Investors expected the prospect of exclusion from such indexes to discourage founders and directors from adopting dual-class stock structures in connection with their initial public offerings.\nWhile there is a voluminous financial literature on the effects of index inclusion and exclusion on stock prices, and legal scholars have recently explored the corporate governance implications of the exponential growth of passive index investing, focusing primarily on the incentives of index fund asset managers, neither the financial nor the legal literature have considered the corporate governance role and influence of the parties who write the rules for index investing: the index providers. We begin to fill this gap in the literature by assessing the efficacy of index providers as corporate governance arbiters through the rubric of their dual-class index exclusion decisions.\nWe start with the premise that the index exclusion sanction will not discourage dual-class listings unless it is sufficiently costly to outweigh the perceived benefits of founder control through a multi-class stock structure. We expect the index exclusion sanction will not be sufficiently costly for several reasons. First, it is difficult, if not impossible, to implement a sanction through the public capital markets. Second, the index inclusion effect on which the anticipated sanction is premised has effectively disappeared in recent years and may never have been a long-term source of lower capital costs. Third, despite the explosive growth of index investing in recent years, funds following stock indexes still hold a relatively modest percentage of the market capitalization of U.S. equities – around 12% according to BlackRock. Finally, the proliferation of index investing opportunities has weakened the market-moving influence of any one benchmark index.\nTo test the efficacy of the sanction, we conduct an event study of the S&P announcement that dual-class companies would henceforth be excluded from the S&P 1500 Composite Index and its components – the S&P 500, S&P 400 mid-cap and S&P 600 small-cap indices. Because S&P grandfathered dual-class companies currently in the index, we are able to compare movements in the stock prices of dual-class companies currently in the index with movements in the stock prices of dual-class companies not yet included in the index at the time of announcement. We do not observe any statistically significant abnormal returns in the stock prices of either included or excluded firms as a result of the S&P announcement, suggesting that exclusion is not expected to have a significant adverse cost of capital effect on firms that elect to list with a dual-class stock structures in the future and the sanction is ineffective. In the absence of an effective sanction, the exclusion of dual-class shares from benchmark equity indexes will not affect corporate governance choices. It may, however, have material adverse consequences for index investors and the index providers themselves."
+  },
+  {
+    "objectID": "research/articles/dual_class/index.html#important-figure",
+    "href": "research/articles/dual_class/index.html#important-figure",
+    "title": "Dual-Class Index Exclusion",
+    "section": "Important figure",
+    "text": "Important figure\n\n\n\nFigure 1\n\n\n@article{winden2019dual,\n  title={Dual-Class Index Exclusion},\n  author={Winden, Andrew and Baker, Andrew},\n  journal={Va. L. \\& Bus. Rev.},\n  volume={13},\n  pages={101},\n  year={2019},\n  publisher={HeinOnline}\n}"
+  },
+  {
+    "objectID": "research/working_papers/ml_comp/index.html",
+    "href": "research/working_papers/ml_comp/index.html",
+    "title": "Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes",
+    "section": "",
+    "text": "Paper\nSSRN"
+  },
+  {
+    "objectID": "research/working_papers/ml_comp/index.html#links",
+    "href": "research/working_papers/ml_comp/index.html#links",
+    "title": "Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes",
+    "section": "",
+    "text": "Paper\nSSRN"
+  },
+  {
+    "objectID": "research/working_papers/ml_comp/index.html#abstract",
+    "href": "research/working_papers/ml_comp/index.html#abstract",
+    "title": "Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes",
+    "section": "Abstract",
+    "text": "Abstract\nThis paper challenges conventional methods used in financial valuation across areas in litigation practice. We use a large-scale empirical simulation, using real firm data, to demonstrate that the widely used “comparable companies” approach allows enormous expert discretion, which enables substantial inconsistency and subjective judgment in court valuations. We then use the same simulation approach to show that using better data choices together with contemporary penalized regression methods generates valuation estimates that are considerably less variable, thereby reducing the scope for expert bias. We also apply this approach to a recent Delaware valuation dispute. This paper should transform financial valuation practice in litigation by both diagnosing and offering a cure for excessive discretion and variability in valuation disputes. Our methods would lead to better performing and more empirically grounded outcomes in legal disputes involving valuation, thus enhancing the fairness and efficiency of the judicial processes in valuation litigation."
+  },
+  {
+    "objectID": "research/working_papers/ml_comp/index.html#important-figure",
+    "href": "research/working_papers/ml_comp/index.html#important-figure",
+    "title": "Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes",
+    "section": "Important figure",
+    "text": "Important figure\nThis figure reports the valuation estimates for Landstar \\(d^*\\) = 43 trading days after the end of 2017 Q4 using different input combinations. The top panel plots the estimated market value from each of the 24 combinations, which are represented by the grey tiles in the lower panel. The combinations vary based on the choice of matching feature set, number of matches, distance measure, and summary measure.\n\n\n\nFigure 1"
+  },
+  {
+    "objectID": "research/working_papers/law_review_matching/index.html",
+    "href": "research/working_papers/law_review_matching/index.html",
+    "title": "Fixing the Law Review Submission Game",
+    "section": "",
+    "text": "Paper\nSSRN"
+  },
+  {
+    "objectID": "research/working_papers/law_review_matching/index.html#links",
+    "href": "research/working_papers/law_review_matching/index.html#links",
+    "title": "Fixing the Law Review Submission Game",
+    "section": "",
+    "text": "Paper\nSSRN"
+  },
+  {
+    "objectID": "research/working_papers/law_review_matching/index.html#abstract",
+    "href": "research/working_papers/law_review_matching/index.html#abstract",
+    "title": "Fixing the Law Review Submission Game",
+    "section": "Abstract",
+    "text": "Abstract\nEvery spring and fall, thousands of manuscripts fill the inboxes of student-run law reviews across the country during submission periods. The process quickly deteriorates into a frantic cycle of offers, requests for expedited decisions, and rejections. Authors who receive an offer immediately seek to parlay it into something “better”, quickly reaching out to notionally more prestigious journals to climb the publishing ladder. Student editors, inundated with submissions, are pressured to act quickly—sometimes within hours—on articles that they have clearly only had the time to skim. This unique system of publishing has its merits; while formal peer review in other disciplines has extended the time from submission to publication to multiple years, law professors are able to write and publish an article, with a full audit of citations, in a matter of months. However, a consensus has developed that stress on the system has tipped the balance of costs to exceed the benefits. The system of publishing American legal scholarship has become less a mechanism for identifying high-quality work than a repeated game of brinkmanship.\nThe contours of this system produce unacceptable burdens and inequities to both students and faculty. Student editors are deluged with submissions, often numbering in the thousands per cycle, something that academics themselves would never countenance. Editors inevitably resort to using proxies—author credentials, institutional affiliation, or existing offers from peer journals—as substitutes for meaningful review. Journals perceived to be lower-ranked shoulder a disproportionate burden, as they screen manuscripts that higher-ranked journals steal through expedited consideration. Authors feel forced to play the expedite game or risk being left behind, producing behavior that, while rational in the moment, is clearly distasteful with hindsight. This system distributes labor inefficiently, undermines careful editorial evaluation, perpetuates status inequities in the academy, and wastes enormous amounts of unpaid student time. In economic terms, the law review submissions market suffers from a textbook case of congestion and market failure.\nThis Article offers a new approach. Drawing on insights from economics and operations management, and the successful use of centralized matching in other two-sided markets, we propose redesigning the law review submission process as a coordinated matching market. In such a system, authors and journals would submit ranked preferences, and a deferred-acceptance algorithm would generate stable matches. This structure eliminates the offer-and-expedite game, distributes the burdens of review more evenly across journals, and gives both authors and editors greater predictability. Unlike prior reforms, it targets the systemic source of inefficiency: the misaligned incentives of decentralized submissions and ad hoc expedite requests. By replacing a chaotic bargaining game with a centralized matching mechanism, the law review system could become more equitable, more efficient, and ultimately more conducive to high-quality scholarship."
+  },
+  {
+    "objectID": "research/working_papers/activism/index.html",
+    "href": "research/working_papers/activism/index.html",
+    "title": "The Effects of Hedge Fund Activism",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/working_papers/activism/index.html#links",
+    "href": "research/working_papers/activism/index.html#links",
+    "title": "The Effects of Hedge Fund Activism",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/working_papers/activism/index.html#abstract",
+    "href": "research/working_papers/activism/index.html#abstract",
+    "title": "The Effects of Hedge Fund Activism",
+    "section": "Abstract",
+    "text": "Abstract\nIn this paper I explore the relationship between the rise of hedge fund activism and firm outcomes, using a study design that explicitly takes into account how activists pick their targets. Contrary to much prior work, I find no evidence that activism is associated with increased firm operating performance or significant long-term returns once comparing to firms based on their similarity to the targets. However, activism does increase firm payouts to shareholders and decreases investment, consistent with the argument of many critics of activism. I also find that firm-level employment declines significantly following a targeting event, and that the subset of firms that experience an increase in operating performance also engage in higher levels of tax avoidance. The deregulation of proxy access rules, wholesale de-staggering of corporate boards, and the rise in importance of proxy advisory firms who frequently recommend voting for activist proposals have made firms more susceptible to aggressive activism over the past three decades. The results in this paper, coupled with the rhetorical shift in focus from short-term profits to sustainable growth by large institutional investors, suggest a re-framing of the public debate over the benefits of shareholder activism."
+  },
+  {
+    "objectID": "research/working_papers/activism/index.html#important-figure",
+    "href": "research/working_papers/activism/index.html#important-figure",
+    "title": "The Effects of Hedge Fund Activism",
+    "section": "Important figure",
+    "text": "Important figure\nFigure 11 reports the average long-term buy-and-hold abnormal returns for the targeted  rms in our sample with its 95% confidence interval (in blue), as well as the average of the propensity-score weighted comparison returns for each target (in red). Panel (a) presents the results for  rms that are taken over within the five years following the event or pseudo-event, and Panel (b) reports the results for firms that are not taken over during this period.\n\n\n\nFigure 1"
+  },
+  {
+    "objectID": "research/working_papers/antitakeover/index.html",
+    "href": "research/working_papers/antitakeover/index.html",
+    "title": "The Dubious Impact of State Antitakeover Provisions",
+    "section": "",
+    "text": "Paper\nCode"
+  },
+  {
+    "objectID": "research/working_papers/antitakeover/index.html#links",
+    "href": "research/working_papers/antitakeover/index.html#links",
+    "title": "The Dubious Impact of State Antitakeover Provisions",
+    "section": "",
+    "text": "Paper\nCode"
+  },
+  {
+    "objectID": "research/working_papers/antitakeover/index.html#abstract",
+    "href": "research/working_papers/antitakeover/index.html#abstract",
+    "title": "The Dubious Impact of State Antitakeover Provisions",
+    "section": "Abstract",
+    "text": "Abstract\nCorporate governance scholars have engaged in a longstanding debate over the impact of state antitakeover provisions. Corporate law practitioners and researchers argue that the affirmation of the “poison pill” made the second generation of antitakeover statutes redundant, while empirical scholars in corporate finance continue to find wide-ranging impacts from their adoption. This paper subjects the standard approach used in the empirical literature to a series of straightforward extensions using current best practice in panel data analysis. Contrary to the majority of published research, there is scant evidence for a consistent and reliable impact of antitakeover statute adoption on firm activity. These findings follow logically from the legal argument that takeover statutes provide little additional takeover deterrence in the presence of a “shadow pill.”"
+  },
+  {
+    "objectID": "research/working_papers/antitakeover/index.html#important-figure",
+    "href": "research/working_papers/antitakeover/index.html#important-figure",
+    "title": "The Dubious Impact of State Antitakeover Provisions",
+    "section": "Important figure",
+    "text": "Important figure\n\n\n\nFigure 3"
+  },
+  {
+    "objectID": "research/articles/bagel/index.html",
+    "href": "research/articles/bagel/index.html",
+    "title": "Machine Learning and Predicted Returns for Event Studies in Securities Litigation",
+    "section": "",
+    "text": "Paper\nCode"
+  },
+  {
+    "objectID": "research/articles/bagel/index.html#links",
+    "href": "research/articles/bagel/index.html#links",
+    "title": "Machine Learning and Predicted Returns for Event Studies in Securities Litigation",
+    "section": "",
+    "text": "Paper\nCode"
+  },
+  {
+    "objectID": "research/articles/bagel/index.html#abstract",
+    "href": "research/articles/bagel/index.html#abstract",
+    "title": "Machine Learning and Predicted Returns for Event Studies in Securities Litigation",
+    "section": "Abstract",
+    "text": "Abstract\nWe investigate the use of machine learning (ML) and other robust estimation techniques in event studies conducted on single securities for the purpose of securities litigation. Single-firm event studies are widely used in civil litigation, with billions of dollars in settlements hinging on the outcome of the exercise. We find that regularization (equivalently, penalized estimation) can yield noticeable improvements in both the variance of event-date abnormal returns and significance-test power. Thus we believe that there is a role for ML methods in event studies used in securities litigation. At the same time, we find that ML-induced performance improvements are smaller than those based on other good practices. Most important are (i) the use of a peer index based on returns for firms in similar industries (how this is computed appears to be less important than that some version be included), and (ii) for significance testing, using the SQ test proposed in Gelbach et al. (2013), because it is robust to the considerable non-normality present in abnormal returns."
+  },
+  {
+    "objectID": "research/articles/bagel/index.html#important-figure",
+    "href": "research/articles/bagel/index.html#important-figure",
+    "title": "Machine Learning and Predicted Returns for Event Studies in Securities Litigation",
+    "section": "Important figure",
+    "text": "Important figure\nFigure 1 plots specification ranks. Each specification has 8 MSE performance values: two time periods (1999–2009 vs. 2009–2019), with and without the FFC factors, and two MSE normalization approaches (\\(\\widehat{R}_{oos}^{k}\\) and \\(\\widehat{R}_{het}^k\\), described below). Each gray dot represents a rank from 1 to 11, and each rank is represented once for each of the eight time-period/FFC-factor/MSE metric combinations. The diamonds plot the specifications’ average ranks. Blue diamonds signify models that allow firms to enter the regression function individually and use cross-validation and penalized regression; red diamonds represent specifications that do not.\n\n\n\nFigure 1\n\n\n@article{baker2020machine,\n  title={Machine learning and predicted returns for event studies in securities litigation},\n  author={Baker, Andrew and Gelbach, Jonah B and others},\n  journal={Journal of Law, Finance, and Accounting},\n  volume={5},\n  number={2},\n  pages={231--272},\n  year={2020},\n  publisher={Now Publishers, Inc.}\n}"
+  },
+  {
+    "objectID": "research/articles/diversity_washing/index.html",
+    "href": "research/articles/diversity_washing/index.html",
+    "title": "Diversity Washing",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/articles/diversity_washing/index.html#paper",
+    "href": "research/articles/diversity_washing/index.html#paper",
+    "title": "Diversity Washing",
+    "section": "",
+    "text": "Paper"
+  },
+  {
+    "objectID": "research/articles/diversity_washing/index.html#abstract",
+    "href": "research/articles/diversity_washing/index.html#abstract",
+    "title": "Diversity Washing",
+    "section": "Abstract",
+    "text": "Abstract\nWe provide large-sample evidence on whether U.S. publicly traded corporations use voluntary disclosures about their commitments to employee diversity opportunistically. We document significant discrepancies between companies’ external stances on diversity, equity, and inclusion (DEI) and their hiring practices. Firms that discuss DEI excessively relative to their actual employee gender and racial diversity (“diversity washers”) obtain superior scores from environmental, social, and governance (ESG) rating organizations and attract more investment from institutional investors with an ESG focus. These outcomes occur even though diversity-washing firms are more likely to incur discrimination violations and have negative human-capital-related news events. Our study provides evidence consistent with growing allegations of misleading statements from firms about their DEI initiatives and highlights the potential consequences of selective ESG disclosures."
+  },
+  {
+    "objectID": "research/articles/diversity_washing/index.html#important-figure",
+    "href": "research/articles/diversity_washing/index.html#important-figure",
+    "title": "Diversity Washing",
+    "section": "Important figure",
+    "text": "Important figure\nFigure 5: Nonparametric summary of ESG outcomes by DEI discussion and diversity ranks. This figure presents the average of Refinitiv’s Overall Score (panel A), Refinitiv’s Social Score (panel B), Sustainalytics Overall Score (panel C), Sustainalytics Social Score (panel D), Ownership by US SIF funds (panel E), and Ownership by ESG funds, based on the fund name (panel F). Each heat map is broken down by the decile of DEI discussion (measured by the overall amount of DEI discussion in our corpus of SEC documents) and the decile of underlying diversity (measured by the percentage of a firm’s U.S.-based workforce that is either female or non-white)\n\n\n\nFigure 5\n\n\n@article{baker2022diversity,\n  title={Diversity washing},\n  author={Baker, Andrew C and Larcker, David F and McCLURE, CHARLES G and Saraph, Durgesh and Watts, Edward M},\n  journal={Journal of Accounting Research},\n  year={2022},\n  publisher={Wiley Online Library}\n}"
+  },
+  {
+    "objectID": "research/articles/slr/index.html",
+    "href": "research/articles/slr/index.html",
+    "title": "Single-Firm Event Studies, Securities Fraud, and Financial Crisis: Problems of Inference",
+    "section": "",
+    "text": "Paper\nCode\nData"
+  },
+  {
+    "objectID": "research/articles/slr/index.html#links",
+    "href": "research/articles/slr/index.html#links",
+    "title": "Single-Firm Event Studies, Securities Fraud, and Financial Crisis: Problems of Inference",
+    "section": "",
+    "text": "Paper\nCode\nData"
+  },
+  {
+    "objectID": "research/articles/slr/index.html#abstract",
+    "href": "research/articles/slr/index.html#abstract",
+    "title": "Single-Firm Event Studies, Securities Fraud, and Financial Crisis: Problems of Inference",
+    "section": "Abstract",
+    "text": "Abstract\nLawsuits brought pursuant to section 10(b) of the Securities and Exchange Act depend on the reliability of a statistical tool called an event study to adjudicate issues of reliance, materiality, loss causation, and damages. Although judicial acceptance of the event study technique is pervasive, there has been little empirical analysis of the ability of event studies to produce reliable results when applied to a single company’s security.\nUsing data from the recent financial crisis, this Note demonstrates that the standard-model event study used in most court proceedings can lead to biased inferences sanctioned through the Daubert standard of admissibility for expert testimony. In particular, in the presence of broad market volatility, a base event study will cause too many returns to be identified as statistically significant. Even recently proposed variations of the event study model specifically designed to address violations of the statistical assumptions of an event study will not completely correct this bias.\nThis Note proposes two alternative forms of event studies that are capable of creating statistically reliable results and should be adopted by courts in instances where there is cause to believe that market volatility has increased. Over previous decades, the judiciary has steadily moved toward a reliance on empirics and expert testimony in overseeing complex civil cases. Yet there has been surprisingly little research accompanying this judicial deference on the ability of statistical evidence to produce the promised result. This Note calls into question whether this movement has been beneficial from a logical or empirical perspective, but it demonstrates that alternative techniques that can aid the finder of fact in resolving these disputes—regardless of market trends—may in fact exist."
+  },
+  {
+    "objectID": "research/articles/slr/index.html#important-figure",
+    "href": "research/articles/slr/index.html#important-figure",
+    "title": "Single-Firm Event Studies, Securities Fraud, and Financial Crisis: Problems of Inference",
+    "section": "Important figure",
+    "text": "Important figure\n\n\n\nFigure 3\n\n\n@article{baker2016single,\n  title={Single-firm event studies, securities fraud, and financial crisis: problems of inference},\n  author={Baker, Andrew C},\n  journal={Stan. L. Rev.},\n  volume={68},\n  pages={1207},\n  year={2016},\n  publisher={HeinOnline}\n}"
+  },
+  {
     "objectID": "research/index.html",
     "href": "research/index.html",
     "title": "Research",
@@ -294,18 +315,11 @@
     "text": "Published Papers\nDifference-in-Differences Designs: A Practitioner’s Guide with Brantly Callaway, Scott Cunningham, Andrew Goodman-Bacon, and Pedro Sant’Anna, 2026, Journal of Economic Literature. [Paper] [Github] [Code]\nStatistical Learning Can Help the Judiciary Fulfill Its Gatekeeping Role Over Expert Witnesses Berkeley Business Law Journal, 2025. [PDF]\nDiversity Washing with David F. Larcker, Charles G. McClure, Durgesh Saraph, and Edward M. Watts Journal of Accounting Research, 2024. [PDF]\nHow Much Should We Trust Staggered Difference-in-Differences Estimates? with David F. Larcker and Charles C.Y. Wang Journal of Financial Economics, 144(2), 2022. [PDF] [Code]\nMachine Learning and Predicted Returns for Event Studies in Securities Litigation with Jonah B. Gelbach Journal of Law, Finance, and Accounting, 5(2), 2020. [PDF] [Code]\nDual-Class Index Exclusion with Andrew Winden Virginia Law & Business Review, 13(2), 2019. [PDF]\nSingle-Firm Event Studies, Securities Fraud, and Financial Crisis: Problems of Inference Stanford Law Review, 68, 2016. [PDF] [Code] [Data]"
   },
   {
-    "objectID": "posts/ai_existential_risk/index.html",
-    "href": "posts/ai_existential_risk/index.html",
-    "title": "AI and Existential Risk",
-    "section": "",
-    "text": "Setting\nRecently, Anthropic hired Chad Jones to join the Anthropic Institute. (Side note - although I got my PhD at Stanford GSB I never met him, and from everything I have heard he is a very nice and smart person.) A blog post notes the hire was likely driven by his work on the tradeoff between AI innovation and existential risks. The post goes on to state:\n\n\n\n\n\nI shot off a post on LinkedIn arguing that this hire didn’t make a ton of sense to me.\n\n\n\n\n\nMy post was then picked up by the FT in an article, and led to many heated text messages. In this blog post I’ll clarify my point.\n\n\nGovernance Puzzle\nAs reflected in my Linkedin post, I’m primarily confused by the strategy from Anthropic. I study corporate governance and how firms signal to the market, and I thought this was a weird hire for obvious reasons.\nAs most people probably know, the federal government recently forced Anthropic to take its leading Mythos model off the market due to safety concerns. According to The Verge, “The company sprang into action immediately, sending a barrage of executives to Washington, DC. But updates have been suspiciously lacking, with no resolution in sight.” The article goes on to further explain that “Anthropic needs the revenue from Mythos to pay for all the compute it’s secured recently, including a deal to pay SpaceX $15 billion per year for access to its data centers, as well as its public image before the IPO. Two of Anthropic’s largest current shareholders — Google and Amazon — have tried to carefully stay on Trump’s good side, so they’re likely not happy either.”\nFrom my perspective, it is odd for a company trying to convince the government that they don’t pose unnecessary safety risks to do this hire at this time. I’m not even saying it’s bad that they made the hire, but that it’s puzzling from a corporate governance perspective. Here is Chad in his own words discussing existential risk and Mythos in an interview (I’m doing long excerpts to not be accused of misrepresenting his views):\n  \nIt’s an interesting interview, and he comes off as well-informed and thoughtful. Having said that, were I holding valuable private placement shares at Anthropic, I wouldn’t be happy about their new hire arguing that Mythos may be pushing the world to the “already there” point of doing “enormous harm to the economy and to people.” Coupled with his toy model showing how the implied tradeoff from classical economic models might allow a good deal of risk-seeking over extinction with standard utility functions, it didn’t make a ton of sense to me if your message is supposed to be “nothing to worry about here because of us”.\n\n\nThe Merits\nMoving on from my confusion over the corporate governance/strategy play, let’s (very briefly) touch on the merits of his argument. I want to clarify a couple things at the outset. Again, from everything that I’ve heard from people who know him, Chad is a great economist, solid mentor/advisor, good person. I think what he did was take a simple model and show how the tradeoffs play out within a standard economic framework.\nMy argument isn’t against this paper per se. As the paper notes, “The goal of the paper is not to provide an exact answer to this question, as the answer will surely depend on parameters that we cannot precisely quantify. Instead, the paper develops some simple models to elucidate the economic forces that are involved.” I just don’t think that it is a question merely of the parameters chosen, but demonstrative of the limitations of the framework itself.\nI have long argued, privately and publicly, that the economic utilitarian framework for doing welfare analysis has severe limitations, which are usually acknowledged and hand-waived away. A friend and colleague accused me of “anti-intellectualism” on this today, which I disagree with, so let me briefly lay out my claim.\nUnder the hood of this model is a need to map choices to utils, and this gets done by plugging in a value of a statistical life. We use compensating differentials (e.g. how much more do you have to get paid to work at Plant A over Plant B to compensate you for the increased fatality rate at Plant A) to impute how much folks implicitly value their life. We then use that number to calculate costs and benefits of e.g. proposed regulations. This is also central to the innovation / risk tradeoff in this paper.\nFirst, I don’t think people generally make this tradeoff either implicitly or explicitly when doing tasks like choosing a career. Sure, it gives you a number, but not necessarily a number that you would want to use for calculating tradeoffs. Moreover, it is not clear why, even if this were a good measure of how someone values their own life, it should be how a social planner (standing in for society) need value said person’s life. None of this is new or novel, and in addition to VSL there is longstanding philosophical work noting the limitations to pure utilitarianism. Chad understands these arguments, and briefly discusses them in his Discussion section:\n\n\n\n\n\nWhile philosophers may consider the total utilitarian perspective worthy of attention, I’m pretty sure it is not the dominant philosophical paradigm for thinking through such choices today.\nThe frequent retort is that “it takes a model to beat a model” and that, even if VSL is flawed, what is the alternative? My view, which may well be anti-intellectual, is to acknowledge the difficulty of the question, and that the answer cannot and will not ever be reduced to plugging in numbers to a social planner function. These are moral considerations that require society to decide how tradeoffs can and should be made, while accepting deep uncertainty and often intractable moral considerations.\nTo put it more simply, the standard economic approach, despite being a “formal framework” doesn’t provide more than the “vibes and anecdotes” that our policymakers currently receive. While economists frequently argue that they are alone in seriously thinking about tradeoffs, this isn’t true in my experience. People make tradeoffs all the time without having to reduce the question to a single dimension.\n\n\nIn Conclusion\nI’m probably sorry to have kick-started this discussion, but maybe it will prove fruitful.\nIn the paper a social planner with log utility would exchange a 1/3 risk of extinction for 55 factor increase in consumption, which Chad finds to be “remarkably unconcerned with existential risk.” Models with bounded “standard utility functions [that] we use frequently in a variety of applications in economics” are more conservative with regards to existential risk. The model is then “extended to include a richer theory of dynamics, the possibility of singularity, and the prospect that AI innovations extend life expectancy.” If AI also extends life expectancy, or makes gains “in the same units”, we avoid the need to deal with the thorny issue of converting lives to dollars.\nHere, even with “with a future-oriented focus that comes from low discounting, AI-induced mortality reductions can make large existential risks bearable.” Society always contains some level of risk, and progress requires acknowledging inherent tradeoffs with safety, but I find it impossible to justify accepting “large existential risks” to the only sentient life in the known universe.\nIt is important to situate this discussion within the current debate. As the paper notes, “[a] substantial contingent of the AI community, including leading researchers at OpenAI and Google, warn that these advances could constitute an existential risk for humanity.” Despite these concerns, the leading hyperscalars are all competing to achieve the singularity. Everything in the paper is perfectly acceptable for academic work, and worthy of academic debate, but I am concerned about what it means for society to have these justifications for bearing extinction risk coming from the companies creating and profiting from the risk."
-  },
-  {
     "objectID": "posts/index.html",
     "href": "posts/index.html",
     "title": "Posts",
     "section": "",
-    "text": "AI and Existential Risk\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJun 26, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Do State Antitakeover Laws Actually Do Anything?\n\n\nA plain-English summary of my paper forthcoming in the Critical Finance Review (from Claude)\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nJul 9, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nAI and Existential Risk\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJun 26, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -320,12 +334,5 @@
     "title": "Andrew C. Baker",
     "section": "Education",
     "text": "Education\nStanford University | Stanford, CA\nPhD in Business Administration | 2021\nStanford University | Stanford, CA\nJuris Doctor | 2017\nGeorgetown University| Washington, DC\nBSc in International Economics | 2009"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   }
 ]

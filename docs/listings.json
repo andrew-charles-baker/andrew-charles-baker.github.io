@@ -2,6 +2,7 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/antitakeover/index.html",
       "/posts/ai_existential_risk/index.html"
     ]
   }
