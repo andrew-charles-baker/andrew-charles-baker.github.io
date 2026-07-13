@@ -63,4 +63,4 @@ The broader lesson goes beyond takeover law. "Natural experiments" from staggere
 
 None of this means corporate governance doesn't matter, or that the balance of power between managers and shareholders is unimportant. It means these particular laws are the wrong laboratory for studying it. For researchers looking for a better one, the paper's conclusion suggests a candidate: Delaware's 2025 Senate Bill 21, which shifted power back toward managers and controllers for Delaware firms, may offer a cleaner shock for the next generation of this research.
 
-If you want the full details, the paper is [here](../../research/working_papers/antitakeover/antitakeover.pdf).
+If you want the full details, the paper is [here](../../research/working_papers/antitakeover/antitakeover.pdf) and the code is available [here](https://github.com/andrew-charles-baker/Antitakeover_CFR).
