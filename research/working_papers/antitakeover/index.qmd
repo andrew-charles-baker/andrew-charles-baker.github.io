@@ -11,7 +11,7 @@ description: Revise and Resubmit, Critical Finance Review
 ## Links
 
 -   [Paper](antitakeover.pdf)
--   [Code](https://github.com/andrewchbaker/State_Antitakeover)
+-   [Code](https://github.com/andrew-charles-baker/Antitakeover_CFR)
 
 ## Abstract
 
