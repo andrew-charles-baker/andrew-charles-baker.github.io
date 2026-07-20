@@ -18,7 +18,7 @@ title: "Research"
 
 **Statistical Learning Can Help the Judiciary Fulfill Its Gatekeeping Role Over Expert Witnesses** *Berkeley Business Law Journal*, 2025. [\[PDF\]](articles/bblj/Statistical%20Learning%20BBLJ.pdf)
 
-**Diversity Washing** with David F. Larcker, Charles G. McClure, Durgesh Saraph, and Edward M. Watts *Journal of Accounting Research*, 2024. [\[PDF\]](articles/diversity_washing/diversity_washing.pdf)
+**Diversity Washing** with David F. Larcker, Charles G. McClure, Durgesh Saraph, and Edward M. Watts *Journal of Accounting Research*, 2024. [\[PDF\]](articles/diversity_washing/diversity_washing.pdf) [\[Replication Files\]](https://www.chicagobooth.edu/-/media/research/arc/docs/journal/online-supplements/blmsw-datasheet-code-and-identifiers.zip)
 
 **How Much Should We Trust Staggered Difference-in-Differences Estimates?** with David F. Larcker and Charles C.Y. Wang *Journal of Financial Economics*, 144(2), 2022. [\[PDF\]](articles/staggered_did/did.pdf) [\[Code\]](https://github.com/andrewchbaker/JFE_DID)
 
