@@ -6,7 +6,7 @@ title: "Research"
 
 **The Dubious Impact of State Antitakeover Provisions**, Forthcoming, *Critical Finance Review*. This version: 2025. [\[PDF\]](working_papers/antitakeover/antitakeover.pdf) [\[Code\]](https://github.com/andrew-charles-baker/Antitakeover_CFR)[\[Summary Post\]](https://andrew-charles-baker.github.io/posts/antitakeover/)
 
-**Fixing the Law Review Submission Game** This version: 2025. [\[PDF\]](working_papers/law_review_matching/Matching%20Markets%20for%20Law%20Reviews.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102)
+**The Law Review Match** This version: 2026. [\[PDF\]](working_papers/law_review_matching/The_Law_Review_Match.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102)
 
 **Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes** with Jonah B. Gelbach and Eric L. Talley, Forthcoming, *Journal of Corporation Law*. [\[PDF\]](working_papers/ml_comp/paper.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4849281)
 
