@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-08-15">
 
-<title>Posts – Andrew C. Baker</title>
+<title>The Law Review Match – Andrew C. Baker</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-255f74ff7fd4d9f64d59ebf143d87be4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-255f74ff7fd4d9f64d59ebf143d87be4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,35 +68,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2MJKX4TFN9"></script>
 
 <script type="text/javascript">
@@ -108,37 +78,8 @@ gtag('js', new Date());
 gtag('config', 'G-2MJKX4TFN9', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -148,7 +89,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Andrew C. Baker</span>
     </a>
   </div>
@@ -159,19 +100,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../files/Baker_CV.pdf"> 
+    <a class="nav-link" href="../../files/Baker_CV.pdf"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../research/index.html"> 
+    <a class="nav-link" href="../../research/index.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../posts/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../posts/index.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
 </ul>
@@ -204,25 +145,45 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVzZWFyY2g=">research <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-problem" id="toc-the-problem" class="nav-link active" data-scroll-target="#the-problem">The Problem</a></li>
+  <li><a href="#why-past-reforms-fall-short" id="toc-why-past-reforms-fall-short" class="nav-link" data-scroll-target="#why-past-reforms-fall-short">Why Past Reforms Fall Short</a></li>
+  <li><a href="#the-fix-a-match" id="toc-the-fix-a-match" class="nav-link" data-scroll-target="#the-fix-a-match">The Fix: A Match</a></li>
+  <li><a href="#some-details-lawyers-will-ask-about" id="toc-some-details-lawyers-will-ask-about" class="nav-link" data-scroll-target="#some-details-lawyers-will-ask-about">Some Details Lawyers Will Ask About</a></li>
+  <li><a href="#the-takeaway" id="toc-the-takeaway" class="nav-link" data-scroll-target="#the-takeaway">The Takeaway</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Posts</h1>
-</div>
+<h1 class="title">The Law Review Match</h1>
+<p class="subtitle lead">A plain-English summary of my new paper with Jake Arft-Guatelli (from Claude)</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">research</div>
+  </div>
+  </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 15, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -232,105 +193,54 @@ window.Quarto = {
 </header>
 
 
+<p>Jake Arft-Guatelli and I have a new working paper, <a href="../../research/working_papers/law_review_matching/The_Law_Review_Match.pdf">The Law Review Match</a> (also on <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102">SSRN</a>), about fixing the law review submission process. The one-sentence summary: the twice-yearly scramble of mass submissions, expedite requests, and letterhead-based article selection is a textbook case of a congested market, and the same matching-market tools that fixed medical residencies and public school admissions — a centralized clearinghouse running a deferred-acceptance algorithm — would fix it too, while keeping what makes law reviews distinctive.</p>
+<section id="the-problem" class="level1">
+<h1>The Problem</h1>
+<p>If you have never submitted to a law review, the process is hard to believe. Twice a year, in February and August, legal scholars submit their manuscripts to dozens of journals simultaneously — student-run law reviews receive <em>thousands</em> of submissions per cycle (Harvard Law Review alone received over 3,000 in 2024). No student editorial board can meaningfully read that volume on the timelines involved, so editors triage using proxies: author credentials, institutional letterhead, and — most importantly — whether some <em>other</em> journal has already made an offer.</p>
+<p>That last proxy is the engine of the whole dysfunction. When an author receives an offer from a journal, the rational next move is not to celebrate — it’s to immediately ask every higher-ranked journal for an “expedited” decision before the offer expires, hoping to trade up. This is the offer-and-expedite game, and everyone has to play it or fall behind. The consequences:</p>
+<ul>
+<li><strong>Editors are rushed.</strong> Decisions that deserve weeks get made in hours, under deadlines set by competing journals’ offers rather than by any review schedule.</li>
+<li><strong>Labor is distributed inequitably.</strong> Lower-ranked journals do the real screening work, and higher-ranked journals free-ride on their offers as a quality signal. Authors treat lower-ranked journals as stepping stones, in a way that ultimately hurts everyone.</li>
+<li><strong>Merit takes a back seat.</strong> When you can’t read everything, letterhead substitutes for judgment.</li>
+<li><strong>Enormous quantities of donated student labor are wasted</strong> — not on editing or evaluating scholarship, but on triaging a broken bargaining game.</li>
+</ul>
+<p>A key point we push in the paper: this is <em>not</em> an indictment of student editors, which is where most critiques of the system aim. Any reviewing body — students, faculty, judges — asked to evaluate thousands of manuscripts in a few weeks, under interruption from expedite deadlines, would reach for the same proxies. The problem is the conditions of review, not the reviewers. That misdiagnosis matters, because reforms that target the <em>people</em> (peer review! faculty control!) leave the broken <em>market</em> intact.</p>
+</section>
+<section id="why-past-reforms-fall-short" class="level1">
+<h1>Why Past Reforms Fall Short</h1>
+<p>In the paper we argue that a successful redesign has to satisfy three criteria: (1) it must <em>end</em> — not just inconvenience — the incentive to expedite; (2) it must distribute editorial labor equitably and protect real time for review; and (3) it must be incentive-compatible, meaning no participant is asked to act against their own interest once the system is adopted. The reform proposals that have circulated for decades each fail at least one:</p>
+<ul>
+<li><strong>Peer review</strong> is rigorous, and paired with exclusive submission it kills the expedite game — but it’s slow, hard to coordinate, and requires law professors to take on a large new refereeing burden and accept multi-year publication timelines. (Fields that have it are not exactly thrilled with it either, particularly now that many reviews are apparently being outsourced to AI.)</li>
+<li><strong>Exploding offers</strong> — take it or leave it in hours — do block expediting, but they compress editors’ timelines rather than protecting them. And we’ve run this experiment: when lower-ranked journals used exploding offers to stop being poached, the elite journals organized against the practice and killed it in 2011.</li>
+<li><strong>Increased faculty involvement</strong> just changes who reviews, not the conditions of review. A faculty selector facing thousands of submissions on expedite timelines inherits the exact same problems.</li>
+</ul>
+</section>
+<section id="the-fix-a-match" class="level1">
+<h1>The Fix: A Match</h1>
+<p>Here is the thing — this exact market failure has been solved before, twice, famously. Medical residencies in the 1950s and New York City public school admissions in the 2000s both suffered from the same disease: congestion, unraveling timelines, strategic gamesmanship, and participants forced into rushed decisions. Both were cured by a centralized clearinghouse running a <em>deferred-acceptance</em> (Gale-Shapley) matching algorithm — work that won Al Roth and Lloyd Shapley the 2012 Nobel Prize in economics.</p>
+<p>The mechanics are simple. Authors submit a ranked list of journals; journals submit a ranked list of manuscripts (plus how many slots they have). The algorithm then runs in rounds: each manuscript “proposes” to its top-ranked journal; journals tentatively hold their favorite proposals up to their quota and reject the rest; rejected manuscripts propose to their next choice; repeat until nothing changes. Every tentative match then becomes final and binding.</p>
+<p>The output has two properties that matter enormously here:</p>
+<ol type="1">
+<li><strong>Stability.</strong> When the algorithm finishes, there is no author-journal pair who would both rather be matched with each other than with their assigned match. Nobody is left thinking a better deal was available.</li>
+<li><strong>Strategy-proofness for authors.</strong> Under author-proposing deferred acceptance, <em>truthfully ranking journals is a dominant strategy</em>. No amount of gamesmanship — strategic submission, bluffing, offer-shopping — can beat simply listing your honest preferences. The expedite game isn’t banned; it’s rendered pointless.</li>
+</ol>
+<p>And for editors, the payoff is the thing the current system never gives them: a protected review period — at least three uninterrupted weeks under our proposed timeline — with no rolling offers, no expedite requests, and no pressure to decide in hours what deserves weeks.</p>
+</section>
+<section id="some-details-lawyers-will-ask-about" class="level1">
+<h1>Some Details Lawyers Will Ask About</h1>
+<p><strong>Balanced issues.</strong> A natural objection: what if a journal gets matched with six tax articles? Journals legitimately care about publishing a balanced issue. The paper adapts a tool from the school choice literature (used there for things like neighborhood priority and desegregation goals): <em>type-specific quotas</em>. Each journal submits, alongside its overall quota, caps by article type — say, at most two tax and three constitutional law pieces — and the clearinghouse enforces the caps automatically inside the algorithm. Authors tag their manuscript with up to three subject-area types at submission. The theory here is worked out (thanks to results by Atila Abdulkadiroğlu on college admissions with quotas): the stability and strategy-proofness properties survive. Specialty journals fit naturally too — their quota vector just puts all slots in one type.</p>
+<p><strong>A concrete timeline.</strong> We propose a full cycle keyed to match day (call it T): registration closes 38+ days out; submissions run from T-38 to T-24; then a protected review period from T-24 to T-3 — with an optional peer review track running in parallel; rankings are due at T-1; the algorithm runs on match day; and a cleanup phase handles unmatched articles and unfilled slots. Two things worth highlighting. First, submissions would be <em>blind</em> — authors redact identifying information, which is standard everywhere else in the academy and which the current credential-driven system makes impossible. Second, clarifying questions between editors and authors flow through the platform anonymously, so blind review survives contact with the editing process.</p>
+<p><strong>Who resists, and how do you get adoption?</strong> The honest answer is that top journals benefit from the status quo — they free-ride on lower-ranked journals’ screening — and history (both the exploding-offer episode and the still-unreformed federal clerkship market) shows incumbents can block reform. But three things cut the other way. First, unlike federal judges, law reviews are run by the very people the current system burns: student editors, who would be the reform’s biggest beneficiaries. Second, top journals still do fine under a match — they get strong articles without the frenzy. Third, medicine showed how to de-risk adoption: before the residency match went live in the 1950s, administrators ran a <em>trial</em> — collecting rankings and running the algorithm in parallel while the old system operated — and the results made the case for switching. Law reviews could do exactly the same, at no cost to anyone.</p>
+</section>
+<section id="the-takeaway" class="level1">
+<h1>The Takeaway</h1>
+<p>The literature on law review reform has spent decades arguing about who should select articles — students, faculty, peer reviewers. Our claim is that this is the wrong question. Put anyone you like in the selection seat: facing thousands of manuscripts, on deadlines set by rivals’ expedite clocks, they will end up skimming and leaning on letterhead. The right question is how to redesign the market so that <em>whoever</em> reviews has the time and conditions to exercise actual editorial judgment. Matching theory gives a proven, implementable answer — one that keeps student editing, keeps multiple submission, keeps fast timelines, and simply deletes the brinkmanship.</p>
+<p>The full paper — including the history of how law reviews ended up this way, the formal mechanism design, and the open questions we can’t yet resolve — is <a href="../../research/working_papers/law_review_matching/The_Law_Review_Match.pdf">here</a>. Comments very welcome; unlike the current submission process, we promise to read them.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="cmVzZWFyY2g=" data-listing-date-sort="1786777200000" data-listing-file-modified-sort="1786808121018" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1437">
-<div class="thumbnail"><a href="../posts/law_review_match/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/law_review_match/index.html" class="no-external">The Law Review Match</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/law_review_match/index.html" class="no-external">A plain-English summary of my new paper with Jake Arft-Guatelli (from Claude)</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVzZWFyY2g='); return false;">research</div>
-
-</div>
-<div class="delink listing-description"><a href="../posts/law_review_match/index.html" class="no-external">
-Jake Arft-Guatelli and I have a new working paper, The Law Review Match (also on SSRN), about fixing the law review submission process. The one-sentence summary: the…
-</a></div>
-</div>
-<div class="metadata">
-<a href="../posts/law_review_match/index.html" class="no-external">
-<div class="listing-date">
-Aug 15, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="cmVzZWFyY2g=" data-listing-date-sort="1783580400000" data-listing-file-modified-sort="1783919419010" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1709">
-<div class="thumbnail"><a href="../posts/antitakeover/index.html" class="no-external">
-
-<p class="card-img-top"><img src="antitakeover/adoption_timing.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/antitakeover/index.html" class="no-external">Do State Antitakeover Laws Actually Do Anything?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/antitakeover/index.html" class="no-external">A plain-English summary of my paper forthcoming in the Critical Finance Review (from Claude)</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVzZWFyY2g='); return false;">research</div>
-
-</div>
-<div class="delink listing-description"><a href="../posts/antitakeover/index.html" class="no-external">
-My paper, The Dubious Impact of State Antitakeover Provisions, is now forthcoming in the <em>Critical Finance Review</em>. The paper is long and fairly technical, so I thought I…
-</a></div>
-</div>
-<div class="metadata">
-<a href="../posts/antitakeover/index.html" class="no-external">
-<div class="listing-date">
-Jul 9, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bmV3cw==" data-listing-date-sort="1782457200000" data-listing-file-modified-sort="1782537605429" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1307">
-<div class="thumbnail"><a href="../posts/ai_existential_risk/index.html" class="no-external">
-
-<p class="card-img-top"><img src="ai_existential_risk/blogphoto.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/ai_existential_risk/index.html" class="no-external">AI and Existential Risk</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/ai_existential_risk/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-</div>
-<div class="delink listing-description"><a href="../posts/ai_existential_risk/index.html" class="no-external">
-Recently, Anthropic hired Chad Jones to join the Anthropic Institute. (Side note - although I got my PhD at Stanford GSB I never met him, and from everything I have heard he…
-</a></div>
-</div>
-<div class="metadata">
-<a href="../posts/ai_existential_risk/index.html" class="no-external">
-<div class="listing-date">
-Jun 26, 2026
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
