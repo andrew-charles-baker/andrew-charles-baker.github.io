@@ -8,11 +8,11 @@ title: "Research"
 
 **The Law Review Match** This version: 2026. [\[PDF\]](working_papers/law_review_matching/The_Law_Review_Match.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102)
 
-**Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes** with Jonah B. Gelbach and Eric L. Talley, Forthcoming, *Journal of Corporation Law*. [\[PDF\]](working_papers/ml_comp/paper.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4849281)
-
 **The Effects of Hedge Fund Activism** This version: 2021. [\[PDF\]](working_papers/activism/Baker_JMP.pdf)
 
 ## Published Papers
+
+**Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes** with Jonah B. Gelbach and Eric L. Talley, Forthcoming, *Journal of Corporation Law*. [\[PDF\]](articles/ml_comp/paper.pdf)
 
 **Difference-in-Differences Designs: A Practitioner's Guide** with Brantly Callaway, Scott Cunningham, Andrew Goodman-Bacon, and Pedro Sant'Anna, 2026, *Journal of Economic Literature*. [\[Paper\]](articles/jel/DiD_JEL.pdf) [\[Github\]](https://github.com/pedrohcgs/JEL-DiD) [\[Code\]](articles/jel/JEL-DiD.zip)
 
