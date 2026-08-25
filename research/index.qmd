@@ -4,15 +4,15 @@ title: "Research"
 
 ## Working Papers
 
-**The Dubious Impact of State Antitakeover Provisions**, Forthcoming, *Critical Finance Review*. This version: 2025. [\[PDF\]](working_papers/antitakeover/antitakeover.pdf) [\[Code\]](https://github.com/andrew-charles-baker/Antitakeover_CFR)[\[Summary Post\]](https://andrew-charles-baker.github.io/posts/antitakeover/)
+**The Dubious Impact of State Antitakeover Provisions**, Forthcoming, *Critical Finance Review*. This version: 2025. [\[PDF\]](working_papers/antitakeover/antitakeover.pdf) [\[Code\]](https://github.com/andrew-charles-baker/Antitakeover_CFR) [\[Summary Post\]](https://andrew-charles-baker.github.io/posts/antitakeover/)
 
-**The Law Review Match** This version: 2026. [\[PDF\]](working_papers/law_review_matching/The_Law_Review_Match.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102)
+**The Law Review Match** This version: 2026. [\[PDF\]](working_papers/law_review_matching/The_Law_Review_Match.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102) [\[Summary Post\]](https://andrew-charles-baker.github.io/posts/law_review_match/)
 
 **The Effects of Hedge Fund Activism** This version: 2021. [\[PDF\]](working_papers/activism/Baker_JMP.pdf)
 
 ## Published Papers
 
-**Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes** with Jonah B. Gelbach and Eric L. Talley, 2026, *Journal of Corporation Law*. [\[PDF\]](articles/ml_comp/paper.pdf)
+**Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes** with Jonah B. Gelbach and Eric L. Talley, 2026, *Journal of Corporation Law*. [\[PDF\]](articles/ml_comp/paper.pdf) [\[Summary Post\]](https://andrew-charles-baker.github.io/posts/validating_valuation/)
 
 **Difference-in-Differences Designs: A Practitioner's Guide** with Brantly Callaway, Scott Cunningham, Andrew Goodman-Bacon, and Pedro Sant'Anna, 2026, *Journal of Economic Literature*. [\[Paper\]](articles/jel/DiD_JEL.pdf) [\[Github\]](https://github.com/pedrohcgs/JEL-DiD) [\[Code\]](articles/jel/JEL-DiD.zip)
 
