@@ -4,9 +4,9 @@ title: "Research"
 
 ## Working Papers
 
-**The Dubious Impact of State Antitakeover Provisions**, Forthcoming, *Critical Finance Review*. This version: 2025. [\[PDF\]](working_papers/antitakeover/antitakeover.pdf) [\[Code\]](https://github.com/andrew-charles-baker/Antitakeover_CFR) [\[Summary Post\]](https://andrew-charles-baker.github.io/posts/antitakeover/)
+**The Dubious Impact of State Antitakeover Provisions**, Forthcoming, *Critical Finance Review*. This version: 2026. [\[PDF\]](working_papers/antitakeover/antitakeover.pdf) [\[Code\]](https://github.com/andrew-charles-baker/Antitakeover_CFR) [\[Summary Post\]](https://andrew-charles-baker.github.io/posts/antitakeover/)
 
-**The Law Review Match** This version: 2026. [\[PDF\]](working_papers/law_review_matching/The_Law_Review_Match.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102) [\[Summary Post\]](https://andrew-charles-baker.github.io/posts/law_review_match/)
+**The Law Review Match**, Forthcoming, *Michigan State Law Review*. This version: 2026. [\[PDF\]](working_papers/law_review_matching/The_Law_Review_Match.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102) [\[Summary Post\]](https://andrew-charles-baker.github.io/posts/law_review_match/)
 
 **The Effects of Hedge Fund Activism** This version: 2021. [\[PDF\]](working_papers/activism/Baker_JMP.pdf)
 
