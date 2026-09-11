@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>IESE Researcher Visa Checklist</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F3EF; --paper:#FAFAF7; --ink:#1E2622; --ink-2:#4E5852; --ink-3:#7C857F;
+  --rule:#D9DCD5; --rule-2:#C4C9C1;
+  --accent:#1E4F8E; --accent-soft:#DCE6F3; --accent-ink:#173F72;
+  --done:#2B6E52; --done-soft:#DCEBE2;
+  --wait:#9A6712; --wait-soft:#F3E7CF;
+  --focus:#1E4F8E;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#151917; --paper:#1D2220; --ink:#E4E7E1; --ink-2:#AEB5AF; --ink-3:#7E877F;
+    --rule:#2E3532; --rule-2:#3D4541;
+    --accent:#86B0EA; --accent-soft:#1F2E42; --accent-ink:#A9C7F2;
+    --done:#7CC29E; --done-soft:#1E3329;
+    --wait:#D9A94E; --wait-soft:#3A2E17;
+    --focus:#86B0EA;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.5;padding-inline:20px;padding-block:40px 80px}
+.wrap{max-width:760px;margin:0 auto}
+h1,h2{font-family:"Fraunces","Iowan Old Style",Georgia,serif;font-weight:500;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h1{font-size:2.1rem;line-height:1.1}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+.lede{color:var(--ink-2);max-width:62ch;margin-top:14px}
+.lede p{margin:0 0 8px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-variant-numeric:tabular-nums}
+header{padding-bottom:26px;border-bottom:1px solid var(--rule-2)}
+.status{display:flex;flex-wrap:wrap;gap:20px 36px;align-items:flex-end;padding:22px 0;border-bottom:1px solid var(--rule)}
+.stat{display:flex;flex-direction:column;gap:2px}
+.stat .n{font-family:"Fraunces",Georgia,serif;font-size:1.9rem;line-height:1;font-weight:500}
+.stat .l{font-size:.78rem;color:var(--ink-3);letter-spacing:.04em;text-transform:uppercase;font-family:"IBM Plex Mono",monospace}
+.bar{height:6px;background:var(--rule);border-radius:3px;overflow:hidden;flex:1 1 180px;align-self:center;min-width:120px}
+.bar i{display:block;height:100%;background:var(--done);width:0;transition:width .3s}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+.sync{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:12px 0 0;font-size:.85rem;color:var(--ink-3);font-family:"IBM Plex Mono",monospace}
+.sync .dot{width:8px;height:8px;border-radius:50%;background:var(--rule-2);display:inline-block;margin-right:6px;vertical-align:middle}
+.sync.ok .dot{background:var(--done)}
+.sync.warn .dot{background:var(--wait)}
+.sync button,.connect button{font:inherit;font-size:.8rem;padding:4px 10px;border:1px solid var(--rule-2);background:var(--paper);color:var(--ink);border-radius:3px;cursor:pointer}
+.sync button:focus-visible,.connect button:focus-visible,.connect input:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.connect{margin-top:12px;padding:14px 16px;border:1px solid var(--rule-2);background:var(--paper);border-radius:4px;font-size:.92rem}
+.connect[hidden]{display:none}
+.connect p{margin:0 0 10px;color:var(--ink-2)}
+.connect form{display:flex;flex-wrap:wrap;gap:8px}
+.connect input{flex:1 1 240px;font:inherit;font-size:.9rem;padding:6px 8px;border:1px solid var(--rule-2);border-radius:3px;background:var(--bg);color:var(--ink)}
+.connect details{margin-top:10px;color:var(--ink-3);font-size:.85rem}
+.connect summary{cursor:pointer}
+.connect ol{margin:6px 0 0;padding-left:20px}
+.connect code{font-family:"IBM Plex Mono",monospace;font-size:.82em;background:var(--accent-soft);color:var(--accent-ink);padding:1px 4px;border-radius:2px}
+.critical{margin-top:22px;padding:14px 16px;border-left:3px solid var(--wait);background:var(--wait-soft);color:var(--ink);font-size:.95rem}
+.critical strong{font-weight:600}
+.phase{display:grid;grid-template-columns:104px 1fr;gap:0 22px;padding:30px 0 6px}
+.phase + .phase{border-top:1px solid var(--rule)}
+.when{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.78rem;color:var(--accent-ink);letter-spacing:.04em;text-transform:uppercase;padding-top:6px;line-height:1.35}
+.when small{display:block;color:var(--ink-3);text-transform:none;letter-spacing:0;font-size:.74rem;margin-top:4px}
+.phase h2{font-size:1.28rem;margin-bottom:4px}
+.phase .why{color:var(--ink-2);font-size:.95rem;margin:0 0 12px;max-width:60ch}
+ul.tasks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+li.task{display:grid;grid-template-columns:22px 1fr;gap:0 12px;padding:11px 0;border-top:1px solid var(--rule);align-items:start}
+li.task:first-child{border-top:0}
+.task input{margin:4px 0 0;width:18px;height:18px;accent-color:var(--done);cursor:pointer}
+.task input:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.task label{cursor:pointer;display:block}
+.task .t{font-weight:600;line-height:1.35}
+.task.done .t{color:var(--ink-3);text-decoration:line-through;text-decoration-color:var(--rule-2)}
+.task .d{color:var(--ink-2);font-size:.93rem;margin-top:3px;max-width:62ch}
+.task.done .d{color:var(--ink-3)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 10px;margin-top:7px;align-items:center}
+.chip{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:3px;background:var(--accent-soft);color:var(--accent-ink)}
+.chip.ext{background:var(--wait-soft);color:var(--wait)}
+.by{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.74rem;color:var(--ink-3)}
+.footnote{margin-top:36px;padding-top:18px;border-top:1px solid var(--rule-2);color:var(--ink-3);font-size:.85rem;max-width:66ch}
+.footnote p{margin:0 0 6px}
+@media (max-width:560px){
+  .phase{grid-template-columns:1fr;gap:6px}
+  .when{padding-top:0}
+  h1{font-size:1.7rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Expediente · Ley 14/2013 art. 72 · Investigador</div>
+    <h1>IESE Researcher Visa Checklist</h1>
+    <div class="lede">
+      <p>Andrew, Jasmin and the little one — Barcelona from 1 March 2027. IESE files the researcher authorization with the UGE in Madrid; you then collect the visa at the Spanish Consulate in San Francisco. Dates below are worked backward from a 1 March arrival and assume the longer window (through 31 July) on the hosting agreement.</p>
+    </div>
+    <div class="status">
+      <div class="stat"><span class="n" id="n-done">0</span><span class="l">done</span></div>
+      <div class="stat"><span class="n" id="n-total">0</span><span class="l">tasks</span></div>
+      <div class="bar"><i id="bar"></i></div>
+      <div class="stat"><span class="n mono" id="n-days">—</span><span class="l">days to 1 Mar</span></div>
+    </div>
+    <div class="sync" id="sync"><span><span class="dot"></span><span id="sync-msg">loading shared ticks…</span></span><button type="button" id="refresh">Refresh</button><button type="button" id="disconnect" hidden>Disconnect</button></div>
+    <div class="connect" id="connect" hidden>
+      <p>Connect once in this browser so your ticks are saved for both of you. Paste the GitHub token Andrew set up; it stays in this browser only.</p>
+      <form id="token-form">
+        <input type="password" id="token" placeholder="github_pat_…" autocomplete="off" spellcheck="false">
+        <button type="submit">Connect</button>
+      </form>
+      <details>
+        <summary>How to make the token (Andrew, once)</summary>
+        <ol>
+          <li>GitHub → Settings → Developer settings → Personal access tokens → <strong>Fine-grained tokens</strong> → Generate new token.</li>
+          <li>Repository access: <em>Only select repositories</em> → <code>andrew-charles-baker.github.io</code>.</li>
+          <li>Permissions → Repository permissions → <strong>Contents: Read and write</strong>. Nothing else.</li>
+          <li>Expiration: set it past July 2027. Copy the token and paste it here, then again in Jasmin's browser.</li>
+        </ol>
+      </details>
+    </div>
+    <div class="critical"><strong>Longest lead item:</strong> the FBI background check plus its federal apostille. Order the FBI check this week — the apostille alone can take 4–8 weeks by mail, and both the UGE file and the consulate want it apostilled and translated.</div>
+  </header>
+
+  <main id="app"></main>
+
+  <div class="footnote">
+    <p>Not legal advice. IESE's international office and the SF consulate govern the actual document list; treat this as the working plan to check against theirs.</p>
+    <p>Each tick is saved as a small commit to <span class="mono">state.json</span> in the website repo, so the page shows the same state to both of you. The page refreshes shared ticks every minute while open.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  var OWNER = 'andrew-charles-baker', REPO = 'andrew-charles-baker.github.io', BRANCH = 'main';
+  var STATE_PATH = 'files/notes/iese-ypcjjevl3hst/state.json';
+  var API = 'https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+STATE_PATH;
+  var TOKEN_KEY = 'iese-gh-token', LOCAL_KEY = 'iese-visa-local';
+  var ARRIVAL = new Date(2027, 2, 1);
+
+  var PHASES = [
+    { when:"Now", sub:"Sept 2026", title:"Open the file with IESE and start the slow documents",
+      why:"Everything downstream waits on IESE's checklist and on the FBI check. Do these in parallel this month.",
+      tasks:[
+        {id:"iese-contact", t:"Get the name of IESE's UGE filer and their document checklist", d:"Ask your faculty contact to loop in International Relations / Faculty Affairs. Confirm they file researcher authorizations under art. 72 Ley 14/2013 and ask for their hosting-agreement template and exact list of what they need from you.", who:["Andrew","IESE"], by:"mid-Sept"},
+        {id:"iese-packet", t:"Send IESE your starter packet", d:"CV, passport scan, a one-paragraph description of the research you'll do at IESE, proposed dates, and confirmation the visit is unpaid (your Berkeley salary continues).", who:["Andrew"], by:"mid-Sept"},
+        {id:"dates", t:"Decide the end date and ask for the longer window", d:"Authorization dates follow the hosting agreement. Request 1 March – 31 July; leaving in June is trivial, extending into July after the fact is not.", who:["Andrew","Jasmin"], by:"mid-Sept"},
+        {id:"fbi", t:"Order FBI Identity History Summary — Andrew and Jasmin", d:"Electronic request via the FBI eDO portal or an FBI-approved channeler, with fingerprints. You need one per adult. This is the item that sets the whole timeline.", who:["Andrew","Jasmin"], by:"this week"},
+        {id:"civil", t:"Order fresh certified marriage and birth certificates", d:"From the issuing county/state. Consulates generally want recently issued copies (often within 6 months of application), so order new ones rather than using what's in the drawer.", who:["Andrew"], by:"end Sept"},
+        {id:"passports", t:"Check passport validity for all three", d:"Valid through at least early 2028 is comfortable. If any expires before then, renew now — the visa is stamped in the passport and the TIE is tied to it.", who:["Andrew","Jasmin"], by:"end Sept"},
+        {id:"berkeley", t:"Berkeley leave approval and employment/salary letter", d:"Sabbatical or leave approval from the Law School, plus an HR letter confirming continued employment and salary — this is your proof of means for the family.", who:["Andrew"], by:"end Sept"}
+      ]},
+    { when:"October", sub:"Oct 2026", title:"Apostilles, translations, insurance",
+      why:"Once the originals are in hand, every one of them needs an apostille and a sworn Spanish translation.",
+      tasks:[
+        {id:"fbi-apostille", t:"Federal apostille on the FBI checks", d:"U.S. Department of State, Office of Authentications — mail-in runs several weeks; expedited courier services exist if the FBI result comes back late.", who:["Andrew"], by:"as soon as FBI results arrive"},
+        {id:"civil-apostille", t:"State apostille on marriage and birth certificates", d:"Secretary of State of the issuing state (not federal). Usually a week or two by mail.", who:["Andrew"], by:"early Oct"},
+        {id:"translate", t:"Sworn translations (traductor jurado) into Spanish", d:"FBI check, marriage certificate, birth certificate. Must be a translator on the Spanish Foreign Ministry's list — IESE may have one they use.", who:["Andrew","IESE"], by:"after apostilles"},
+        {id:"insurance", t:"Buy Spanish private health insurance for all three, effective 1 March", d:"Full coverage, no copays, no waiting periods, from an insurer authorized in Spain (Sanitas, Adeslas, DKV, Asisa). Get the certificate of coverage in Spanish for each person.", who:["Andrew"], by:"end Oct"},
+        {id:"means", t:"Assemble proof of means", d:"Berkeley salary letter plus 3–6 months of bank statements. Thresholds are set as multiples of IPREM for you plus each dependent — ask IESE for the current figures.", who:["Andrew"], by:"end Oct"},
+        {id:"photos", t:"Passport photos to Spanish spec", d:"Two per person, white background, recent.", who:["Andrew","Jasmin"], by:"end Oct"},
+        {id:"hosting", t:"Sign the hosting agreement (convenio de acogida) with IESE", d:"States the research project, dates, that it's unpaid, and IESE's commitment as host. IESE attaches its own accreditation documents.", who:["IESE","Andrew"], by:"end Oct"}
+      ]},
+    { when:"Nov – Dec", sub:"Nov–Dec 2026", title:"IESE files with the UGE",
+      why:"The UGE has 20 working days to decide; silence counts as approval. Filing by early December lands a decision in early January.",
+      tasks:[
+        {id:"uge-file", t:"IESE submits the researcher authorization for you and the family", d:"One application covering Andrew, Jasmin and your child. Pay the application fee IESE specifies; confirm IESE files the family members alongside rather than after.", who:["IESE"], by:"early Dec"},
+        {id:"uge-decision", t:"UGE resolution received", d:"IESE forwards the approved authorization by email. You need this in hand before the consulate will take the visa application.", who:["IESE"], by:"early–mid Jan"}
+      ]},
+    { when:"January", sub:"Jan 2027", title:"Visa at the San Francisco consulate",
+      why:"Berkeley falls under the SF consulate. Appointment slots fill weeks out, so book before the UGE decision arrives.",
+      tasks:[
+        {id:"consulate-appt", t:"Book consulate appointments for all three", d:"Book as soon as the UGE file is submitted, not after approval. Check whether the consulate lets the family attend together.", who:["Andrew"], by:"early Dec"},
+        {id:"visa-forms", t:"Complete national visa forms and assemble originals + copies", d:"National visa application per person, the UGE authorization, passports, photos, apostilled and translated documents, insurance certificates, proof of means, visa fee.", who:["Andrew","Jasmin"], by:"before appointment"},
+        {id:"visa-issued", t:"Visas issued; passports returned", d:"Roughly 10 working days. The consulate holds the passports — don't plan international travel in that window.", who:["Consulate"], by:"late Jan / early Feb"}
+      ]},
+    { when:"Before you fly", sub:"Feb 2027", title:"Barcelona logistics",
+      why:"Two things on arrival depend on paperwork you can start now: registering your address and getting the residence cards.",
+      tasks:[
+        {id:"housing", t:"Sign a lease with all names on it", d:"The lease is what the Ayuntamiento accepts for empadronamiento, which the TIE appointment then requires.", who:["Andrew","Jasmin"], by:"Feb"},
+        {id:"flights", t:"Book flights for on or after the visa's start date", d:"Enter Spain within the visa's validity window.", who:["Andrew"], by:"after visas return"},
+        {id:"school", t:"School or childcare enrollment, if applicable", d:"Barcelona schools will want the empadronamiento certificate; international schools are more flexible.", who:["Jasmin","Andrew"], by:"Feb"}
+      ]},
+    { when:"On arrival", sub:"March 2027", title:"First 30 days in Barcelona",
+      why:"The visa gets you in; the TIE is the residence card that makes the stay legal past the entry period.",
+      tasks:[
+        {id:"padron", t:"Empadronamiento at the Ayuntamiento", d:"Register the family's address. Bring the lease and passports.", who:["Andrew","Jasmin"], by:"first week"},
+        {id:"tie", t:"TIE appointment at Policía Nacional for all three", d:"Must be requested within 30 days of entry. Cita previa slots in Barcelona are notoriously scarce — ask IESE's international office whether they can book or escalate.", who:["Andrew","IESE"], by:"within 30 days"},
+        {id:"iese-onboard", t:"IESE onboarding: ID, office, library, email", d:"And say thank you to the faculty member who made this happen.", who:["IESE","Andrew"], by:"first week"}
+      ]}
+  ];
+
+  var done = {}, sha = null, token = null, timer = null, pending = false, saving = false;
+  try { token = localStorage.getItem(TOKEN_KEY); } catch(e){}
+
+  var app = document.getElementById('app');
+  var syncEl = document.getElementById('sync'), syncMsg = document.getElementById('sync-msg');
+  var connectEl = document.getElementById('connect'), disconnectBtn = document.getElementById('disconnect');
+
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function b64enc(s){ return btoa(unescape(encodeURIComponent(s))); }
+  function b64dec(s){ return decodeURIComponent(escape(atob(s.replace(/\n/g,'')))); }
+
+  function render(){
+    app.innerHTML = PHASES.map(function(p){
+      return '<section class="phase"><div class="when">'+esc(p.when)+'<small>'+esc(p.sub)+'</small></div><div>'
+        +'<h2>'+esc(p.title)+'</h2><p class="why">'+esc(p.why)+'</p><ul class="tasks">'
+        + p.tasks.map(function(t){
+            var isDone = !!done[t.id];
+            return '<li class="task'+(isDone?' done':'')+'" data-key="'+t.id+'">'
+              +'<input type="checkbox" id="cb-'+t.id+'"'+(isDone?' checked':'')+'>'
+              +'<label for="cb-'+t.id+'"><div class="t">'+esc(t.t)+'</div><div class="d">'+esc(t.d)+'</div>'
+              +'<div class="meta">'+t.who.map(function(w){ return '<span class="chip'+((w==='IESE'||w==='Consulate')?' ext':'')+'">'+esc(w)+'</span>'; }).join('')
+              +'<span class="by">by '+esc(t.by)+'</span></div></label></li>';
+          }).join('')
+        +'</ul></div></section>';
+    }).join('');
+    updateStats();
+  }
+
+  function updateStats(){
+    var total = 0, n = 0;
+    PHASES.forEach(function(p){ p.tasks.forEach(function(t){ total++; if (done[t.id]) n++; }); });
+    document.getElementById('n-done').textContent = n;
+    document.getElementById('n-total').textContent = total;
+    document.getElementById('bar').style.width = (total ? (n/total*100) : 0)+'%';
+    var days = Math.round((ARRIVAL - new Date()) / 86400000);
+    document.getElementById('n-days').textContent = days > 0 ? days : 0;
+  }
+
+  function setSync(cls, msg){ syncEl.className = 'sync'+(cls?' '+cls:''); syncMsg.textContent = msg; }
+  function showConnect(){ connectEl.hidden = !!token; disconnectBtn.hidden = !token; }
+
+  function headers(){
+    var h = {'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};
+    if (token) h['Authorization'] = 'Bearer '+token;
+    return h;
+  }
+
+  function load(quiet){
+    if (!quiet) setSync('', 'loading shared ticks…');
+    return fetch(API+'?ref='+BRANCH+'&t='+Date.now(), {headers: headers(), cache:'no-store'}).then(function(r){
+      if (r.status === 404){ sha = null; return {done:{}}; }
+      if (r.status === 401 && token){ token = null; try{localStorage.removeItem(TOKEN_KEY);}catch(e){} showConnect(); setSync('warn','token rejected — reconnect'); return load(true); }
+      if (!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ sha = j.sha; try { return JSON.parse(b64dec(j.content)); } catch(e){ return {done:{}}; } });
+    }).then(function(st){
+      if (!saving && !pending){ done = (st && st.done) || {}; render(); }
+      setSync(token ? 'ok' : 'warn', token ? 'connected — ticks save for both of you' : 'not connected — ticks stay in this browser');
+    }).catch(function(e){
+      var local = null; try { local = JSON.parse(localStorage.getItem(LOCAL_KEY)); } catch(x){}
+      if (local && !pending){ done = local; render(); }
+      setSync('warn', 'could not reach GitHub ('+e.message+') — showing last known');
+    });
+  }
+
+  function save(){
+    if (!token){ try { localStorage.setItem(LOCAL_KEY, JSON.stringify(done)); } catch(e){} pending = false; return; }
+    saving = true; pending = false;
+    setSync('', 'saving…');
+    var body = { message: 'Checklist: '+Object.keys(done).length+' of '+countTotal()+' done', content: b64enc(JSON.stringify({done:done, updated:new Date().toISOString()}, null, 2)), branch: BRANCH };
+    if (sha) body.sha = sha;
+    fetch(API, {method:'PUT', headers: Object.assign(headers(), {'Content-Type':'application/json'}), body: JSON.stringify(body)}).then(function(r){
+      if (r.status === 409 || r.status === 422){
+        // someone else saved first: re-read, merge our view on top, retry once
+        return fetch(API+'?ref='+BRANCH+'&t='+Date.now(), {headers: headers(), cache:'no-store'}).then(function(r2){ return r2.ok ? r2.json() : null; }).then(function(j){
+          if (j){ sha = j.sha; var remote = {}; try { remote = JSON.parse(b64dec(j.content)).done || {}; } catch(e){} done = Object.assign({}, remote, done); }
+          saving = false; return save();
+        });
+      }
+      if (r.status === 401 || r.status === 403){ saving = false; token = null; try{localStorage.removeItem(TOKEN_KEY);}catch(e){} showConnect(); setSync('warn','token rejected or lacks Contents: write — reconnect'); return; }
+      if (!r.ok) throw new Error('HTTP '+r.status);
+      return r.json().then(function(j){ sha = j.content && j.content.sha; saving = false; setSync('ok', 'saved '+new Date().toLocaleTimeString([], {hour:'numeric', minute:'2-digit'})); if (pending) { pending = false; save(); } });
+    }).catch(function(e){ saving = false; setSync('warn', 'save failed ('+e.message+') — will retry on next tick'); pending = true; });
+  }
+  function countTotal(){ var n=0; PHASES.forEach(function(p){ n += p.tasks.length; }); return n; }
+
+  app.addEventListener('change', function(e){
+    var cb = e.target;
+    if (!cb || cb.type !== 'checkbox') return;
+    var id = cb.id.replace(/^cb-/, '');
+    if (cb.checked) done[id] = true; else delete done[id];
+    cb.closest('li.task').classList.toggle('done', cb.checked);
+    updateStats();
+    pending = true;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ if (saving){ return; } save(); }, 1200);
+  });
+
+  document.getElementById('token-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var v = document.getElementById('token').value.trim();
+    if (!v) return;
+    token = v; try { localStorage.setItem(TOKEN_KEY, v); } catch(x){}
+    document.getElementById('token').value = '';
+    showConnect();
+    load().then(function(){ if (Object.keys(done).length === 0){ var local=null; try{ local = JSON.parse(localStorage.getItem(LOCAL_KEY)); }catch(x){} if (local && Object.keys(local).length){ done = local; render(); pending = true; save(); } } });
+  });
+  disconnectBtn.addEventListener('click', function(){ token = null; try{localStorage.removeItem(TOKEN_KEY);}catch(e){} showConnect(); setSync('warn','not connected — ticks stay in this browser'); });
+  document.getElementById('refresh').addEventListener('click', function(){ load(); });
+
+  render();
+  showConnect();
+  load();
+  setInterval(function(){ if (!document.hidden && !saving && !pending) load(true); }, 60000);
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden && !saving && !pending) load(true); });
+})();
+</script>
+</body>
+</html>
