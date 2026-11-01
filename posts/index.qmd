@@ -3,10 +3,13 @@ title: "Posts"
 listing:
   contents: .
   sort: "date desc"
-  type: default
+  template: ../assets/_post-list.ejs.md
+  date-format: "MMM D, YYYY"
+  fields: [date, title, subtitle, description, categories]
+  max-description-length: 180
   categories: true
   sort-ui: false
   filter-ui: false
-page-layout: full
+page-layout: article
 title-block-banner: false
 ---

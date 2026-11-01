@@ -1,6 +1,62 @@
-/* css styles */
+/* Self-hosted typefaces.
+   TeX Gyre Schola (a Century Schoolbook revival; GUST Font License) for text and headings.
+   Public Sans (SIL OFL 1.1) for navigation, dates and other small labels.
+   Licenses are in assets/fonts/. */
 
-/* Increase spacing before Education heading on about page */
-#quarto-document-content h2 {
-  margin-top: 2.5rem;
+@font-face {
+  font-family: "Schola";
+  src: url("assets/fonts/texgyreschola-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Schola";
+  src: url("assets/fonts/texgyreschola-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Schola";
+  src: url("assets/fonts/texgyreschola-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Schola";
+  src: url("assets/fonts/texgyreschola-bolditalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("assets/fonts/public-sans-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("assets/fonts/public-sans-latin-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("assets/fonts/public-sans-latin-500-normal.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("assets/fonts/public-sans-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }

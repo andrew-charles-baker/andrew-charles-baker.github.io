@@ -1,17 +1,19 @@
 project:
   type: website
   output-dir: docs
-  
+
   resources:
     - "files/**"
+    - "assets/fonts/**"
 
 website:
   title: "Andrew C. Baker"
+  site-url: "https://andrew-charles-baker.github.io"
   google-analytics: "G-2MJKX4TFN9"
   sidebar: false
   reader-mode: true
   navbar:
-    background: primary
+    background: light
     search: true
     left:
       - href: index.qmd
@@ -25,17 +27,23 @@ website:
     right:
       - icon: linkedin
         href: https://linkedin.com/in/andrew-baker-09bb6326
+        aria-label: LinkedIn
       - icon: github
         href: https://github.com/andrew-charles-baker
+        aria-label: GitHub
       - icon: envelope
         href: "mailto:andrew.baker@berkeley.edu"
+        aria-label: Email
 
 format:
   html:
-    theme: flatly
-    fontsize: 1.4em
+    theme:
+      - default
+      - assets/theme.scss
     css: styles.css
     toc: true
-    
-editor: visual
+    toc-title: "On this page"
+    smooth-scroll: true
+    link-external-newwindow: false
 
+editor: visual

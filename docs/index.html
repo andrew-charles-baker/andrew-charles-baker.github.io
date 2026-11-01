@@ -31,15 +31,18 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-255f74ff7fd4d9f64d59ebf143d87be4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5df5e27eee0699beb05a5fc8f3ae6ad8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-recent-posts .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-subtitle','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-website","listing-format","listing-editor","listing-language","listing-title","listing-date","listing-categories","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-subtitle"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-recent-posts'] = new List('listing-recent-posts', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2MJKX4TFN9"></script>
 
 <script type="text/javascript">
@@ -76,12 +108,42 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2MJKX4TFN9', { 'anonymize_ip': true});
 </script>
+<style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed home-page quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -117,17 +179,17 @@ gtag('config', 'G-2MJKX4TFN9', { 'anonymize_ip': true});
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://linkedin.com/in/andrew-baker-09bb6326"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://linkedin.com/in/andrew-baker-09bb6326"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/andrew-charles-baker"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/andrew-charles-baker"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:andrew.baker@berkeley.edu"> <i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="mailto:andrew.baker@berkeley.edu"> <i class="bi bi-envelope" role="img" aria-label="Email">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -144,53 +206,136 @@ gtag('config', 'G-2MJKX4TFN9', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-  <ul>
-  <li><a href="#education" id="toc-education" class="nav-link active" data-scroll-target="#education">Education</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<div class="quarto-about-broadside column-page">
-  <div class="about-main">
-    <div class="about-entity" style="background-image: url('files/Baker-Portrait.jpg')"></div>
-    <div class="about-contents"><header id="title-block-header" class="quarto-title-block default">
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Andrew C. Baker</h1>
 <p class="subtitle lead">Assistant Professor, Berkeley Law</p>
 </div>
+
 <div>
   <div class="description">
     andrew.baker@berkeley.edu
   </div>
 </div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
 
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="home">
+<div class="hero">
+<p><img src="files/Baker-Portrait.jpg" class="hero-portrait img-fluid" alt="Portrait of Andrew C. Baker"></p>
+<div class="hero-text">
+<h1 class="hero-name">
+Andrew C. Baker
+</h1>
+<p><span class="hero-role">Assistant Professor, Berkeley Law</span></p>
+<div class="hero-bio">
 <p>I am an Assistant Professor of Law at the University of California, Berkeley. I research corporate governance, securities regulation, empirical legal studies, and law and economics/finance.</p>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">Education</h2>
-<p><strong>Stanford University</strong> | Stanford, CA<br>
-PhD in Business Administration | 2021</p>
-<p><strong>Stanford University</strong> | Stanford, CA<br>
-Juris Doctor | 2017</p>
-<p><strong>Georgetown University</strong>| Washington, DC<br>
-BSc in International Economics | 2009</p>
-
-
-</section>
-</main></div>
-  </div>
 </div>
- <!-- /main -->
+<p><span class="hero-contact"><a href="mailto:andrew.baker@berkeley.edu">andrew.baker@berkeley.edu</a></span></p>
+</div>
+</div>
+<div class="home-grid">
+<div class="home-posts">
+<h2 class="home-heading anchored">
+Recent posts
+</h2>
+<div id="listing-recent-posts" class="quarto-listing quarto-listing-container-custom">
+<div class="list post-list">
+<div class="post-row" data-index="0" data-categories="cmVzZWFyY2g=" data-listing-date-sort="1787641200000" data-listing-file-modified-sort="1793486217667" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1153">
+<div class="post-date listing-date">Aug 25, 2026</div>
+<div class="post-main">
+<h3 class="no-anchor post-title listing-title"><a href="./posts/validating_valuation/index.html">Validating Valuation</a></h3>
+<p class="post-blurb listing-subtitle">A plain-English summary of my paper with Jonah Gelbach and Eric Talley, now out in the Journal of Corporation Law (written by Claude)</p>
+<div class="post-cats listing-categories">
+
+<a href="#" class="post-cat listing-category" onclick="window.quartoListingCategory('cmVzZWFyY2g='); return false;">research</a>
+
+</div>
+</div>
+</div>
+<div class="post-row" data-index="1" data-categories="cmVzZWFyY2g=" data-listing-date-sort="1786777200000" data-listing-file-modified-sort="1793486217225" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1725">
+<div class="post-date listing-date">Aug 15, 2026</div>
+<div class="post-main">
+<h3 class="no-anchor post-title listing-title"><a href="./posts/law_review_match/index.html">The Law Review Match</a></h3>
+<p class="post-blurb listing-subtitle">A plain-English summary of my new paper with Jake Arft-Guatelli (from Claude)</p>
+<div class="post-cats listing-categories">
+
+<a href="#" class="post-cat listing-category" onclick="window.quartoListingCategory('cmVzZWFyY2g='); return false;">research</a>
+
+</div>
+</div>
+</div>
+<div class="post-row" data-index="2" data-categories="cmVzZWFyY2g=" data-listing-date-sort="1783580400000" data-listing-file-modified-sort="1793486217587" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1709">
+<div class="post-date listing-date">Jul 9, 2026</div>
+<div class="post-main">
+<h3 class="no-anchor post-title listing-title"><a href="./posts/antitakeover/index.html">Do State Antitakeover Laws Actually Do Anything?</a></h3>
+<p class="post-blurb listing-subtitle">A plain-English summary of my paper forthcoming in the Critical Finance Review (from Claude)</p>
+<div class="post-cats listing-categories">
+
+<a href="#" class="post-cat listing-category" onclick="window.quartoListingCategory('cmVzZWFyY2g='); return false;">research</a>
+
+</div>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<p><span class="more-link"><a href="./posts/index.html">All posts</a></span></p>
+</div>
+<div class="home-education">
+<h2 class="home-heading anchored">
+Education
+</h2>
+<div class="dated">
+<p><span class="year">2021</span></p>
+<p><span class="edu-school">Stanford University</span><br>
+PhD in Business Administration <span class="edu-place">Stanford, CA</span></p>
+</div>
+<div class="dated">
+<p><span class="year">2017</span></p>
+<p><span class="edu-school">Stanford University</span><br>
+Juris Doctor <span class="edu-place">Stanford, CA</span></p>
+</div>
+<div class="dated">
+<p><span class="year">2009</span></p>
+<p><span class="edu-school">Georgetown University</span><br>
+BSc in International Economics <span class="edu-place">Washington, DC</span></p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -254,7 +399,7 @@ BSc in International Economics | 2009</p>
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/andrew-charles-baker\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -586,4 +731,5 @@ BSc in International Economics | 2009</p>
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

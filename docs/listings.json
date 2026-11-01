@@ -7,5 +7,14 @@
       "/posts/antitakeover/index.html",
       "/posts/ai_existential_risk/index.html"
     ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/validating_valuation/index.html",
+      "/posts/law_review_match/index.html",
+      "/posts/antitakeover/index.html",
+      "/posts/ai_existential_risk/index.html"
+    ]
   }
 ]

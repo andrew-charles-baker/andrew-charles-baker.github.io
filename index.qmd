@@ -1,25 +1,76 @@
 ---
 title: "Andrew C. Baker"
 subtitle: "Assistant Professor, Berkeley Law"
+body-classes: home-page
 email: andrew.baker@berkeley.edu
 image: files/Baker-Portrait.jpg
 description: andrew.baker@berkeley.edu
-about:
-  template: broadside
-format:
-  html: 
-    page-layout: article
+page-layout: full
+toc: false
+listing:
+  id: recent-posts
+  contents: "posts/*/index.qmd"
+  sort: "date desc"
+  max-items: 3
+  template: assets/_post-list.ejs.md
+  date-format: "MMM D, YYYY"
+  fields: [date, title, subtitle, description, categories]
+  max-description-length: 150
+  feed: false
 ---
 
+::::: home
+
+:::: hero
+![](files/Baker-Portrait.jpg){.hero-portrait fig-alt="Portrait of Andrew C. Baker"}
+
+::: hero-text
+<h1 class="hero-name">Andrew C. Baker</h1>
+
+[Assistant Professor, Berkeley Law]{.hero-role}
+
+::: hero-bio
 I am an Assistant Professor of Law at the University of California, Berkeley. I research corporate governance, securities regulation, empirical legal studies, and law and economics/finance.
+:::
 
-## Education
+[[andrew.baker@berkeley.edu](mailto:andrew.baker@berkeley.edu)]{.hero-contact}
+:::
+::::
 
-**Stanford University** \| Stanford, CA\
-PhD in Business Administration \| 2021
+:::: home-grid
+::: home-posts
+<h2 class="home-heading">Recent posts</h2>
 
-**Stanford University** \| Stanford, CA\
-Juris Doctor \| 2017
+::: {#recent-posts}
+:::
 
-**Georgetown University**\| Washington, DC\
-BSc in International Economics \| 2009
+[[All posts](posts/index.qmd)]{.more-link}
+:::
+
+::: home-education
+<h2 class="home-heading">Education</h2>
+
+::: dated
+[2021]{.year}
+
+[Stanford University]{.edu-school}\
+PhD in Business Administration [Stanford, CA]{.edu-place}
+:::
+
+::: dated
+[2017]{.year}
+
+[Stanford University]{.edu-school}\
+Juris Doctor [Stanford, CA]{.edu-place}
+:::
+
+::: dated
+[2009]{.year}
+
+[Georgetown University]{.edu-school}\
+BSc in International Economics [Washington, DC]{.edu-place}
+:::
+:::
+::::
+
+:::::

@@ -1,0 +1,682 @@
+/*-- scss:defaults --*/
+
+// Palette: Berkeley's own colors, used with restraint.
+$berkeley-blue: #003262;   // headings, links, the name
+$founders-rock: #3B7EA1;   // hover state
+$medalist:      #C4820E;   // link underlines
+$california-gold: #FDB515; // "you are here" marks: active nav, TOC, quotes
+$ink:   #262A33;           // body text
+$muted: #5B6270;           // dates, captions, secondary lines
+$rule:  #DCE1E8;           // dividers
+$wash:  #EEF2F7;           // quiet fills
+
+$font-family-serif: "Schola", "Century Schoolbook", "New Century Schoolbook", Georgia, serif;
+$font-family-sans-serif: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$font-family-base: $font-family-serif;
+$headings-font-family: $font-family-serif;
+
+$font-size-root: 18px;
+$font-size-base: 1rem;
+$line-height-base: 1.62;
+
+$h1-font-size: 2rem;        // 36px
+$h2-font-size: 1.3333rem;   // 24px
+$h3-font-size: 1.1667rem;   // 21px
+$h4-font-size: 1rem;        // 18px
+$headings-font-weight: 700;
+$headings-line-height: 1.2;
+$headings-color: $berkeley-blue;
+
+$primary: $berkeley-blue;
+$secondary: $muted;
+$body-color: $ink;
+$body-bg: #ffffff;
+$link-color: $berkeley-blue;
+$link-hover-color: $founders-rock;
+$border-color: $rule;
+
+$navbar-bg: #ffffff;
+$navbar-fg: $berkeley-blue;
+$navbar-hl: $berkeley-blue;
+
+$toc-color: $muted;
+$toc-font-size: 0.8rem;
+$toc-active-border: $california-gold;
+$toc-inactive-border: $rule;
+
+$grid-body-width: 720px;
+$grid-sidebar-width: 220px;
+$grid-margin-width: 230px;
+
+$code-color: #8a4b08;
+$code-bg: $wash;
+
+/*-- scss:rules --*/
+
+// ---------- Base type ----------
+
+body {
+  font-feature-settings: "kern", "liga", "onum";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+  letter-spacing: -0.01em;
+  font-feature-settings: "kern", "liga", "lnum";
+}
+
+#quarto-document-content h2 {
+  margin-top: 2.6rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+#quarto-document-content h3 {
+  margin-top: 2rem;
+}
+
+// Posts use top-level (#) headings for their sections.
+#quarto-document-content section.level1 > h1 {
+  font-size: 1.6rem;
+  margin-top: 2.8rem;
+  margin-bottom: 0.9rem;
+}
+
+// Links: blue text, gold underline that turns blue on hover.
+#quarto-document-content a,
+.quarto-title-block a {
+  text-decoration: underline;
+  text-decoration-color: rgba($medalist, 0.75);
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    color: $founders-rock;
+    text-decoration-color: currentColor;
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid $founders-rock;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: rgba($california-gold, 0.35);
+}
+
+blockquote,
+.blockquote {
+  border-left: 3px solid $california-gold;
+  padding: 0.1rem 0 0.1rem 1.1rem;
+  margin: 1.6rem 0;
+  color: $ink;
+  font-size: 1rem;
+}
+
+figcaption,
+.figure-caption,
+.quarto-float-caption,
+.caption {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: $muted;
+  margin-top: 0.6rem;
+}
+
+#quarto-document-content img {
+  border-radius: 2px;
+}
+
+hr {
+  border-color: $rule;
+  opacity: 1;
+}
+
+code {
+  font-size: 0.85em;
+}
+
+// ---------- Navbar ----------
+
+.navbar {
+  border-bottom: 1px solid $rule;
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+  box-shadow: none;
+}
+
+.navbar-brand .navbar-title,
+.navbar .navbar-title {
+  font-family: $font-family-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.005em;
+  color: $berkeley-blue;
+}
+
+.navbar .nav-link {
+  font-family: $font-family-sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: $ink;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: $berkeley-blue;
+}
+
+@media (min-width: 992px) {
+  .navbar .navbar-nav:not(.ms-auto) .nav-link {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+  .navbar .navbar-nav .nav-link.active {
+    color: $berkeley-blue;
+    box-shadow: inset 0 -3px 0 $california-gold;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar .navbar-nav .nav-link.active {
+    color: $berkeley-blue;
+    text-decoration: underline;
+    text-decoration-color: $california-gold;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.35em;
+  }
+}
+
+.navbar .bi {
+  color: $berkeley-blue;
+}
+
+// ---------- Table of contents ----------
+
+#TOC,
+#quarto-margin-sidebar {
+  font-family: $font-family-sans-serif;
+}
+
+#toc-title,
+#TOC h2,
+.quarto-listing-category-title {
+  font-family: $font-family-sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: $muted;
+  letter-spacing: 0;
+  text-transform: none;
+  margin-bottom: 0.6rem;
+}
+
+#TOC .nav-link,
+#TOC a {
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+#TOC .nav-link,
+#TOC a.nav-link {
+  color: $muted;
+}
+
+#TOC .nav-link.active,
+#TOC a.nav-link.active {
+  color: $berkeley-blue;
+  font-weight: 500;
+}
+
+// ---------- Title block (posts, papers, research page) ----------
+
+#title-block-header {
+  margin-bottom: 2rem;
+}
+
+.quarto-title-block .quarto-title h1.title,
+#title-block-header h1.title {
+  font-size: 2.25rem;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.4rem;
+}
+
+.quarto-title-block .subtitle,
+#title-block-header p.subtitle {
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-size: 1.1667rem;
+  line-height: 1.45;
+  color: $muted;
+  margin-top: 0.5rem;
+}
+
+.quarto-title-meta {
+  font-family: $font-family-sans-serif;
+  margin-top: 0.9rem;
+}
+
+#title-block-header .quarto-title-meta-heading:not(:first-child),
+.quarto-title-meta > div > .quarto-title-meta-heading {
+  margin-top: 0.4rem;
+}
+
+.quarto-title-meta-heading {
+  font-family: $font-family-sans-serif;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-size: 0.72rem !important;
+  font-weight: 600;
+  color: $muted;
+  opacity: 1 !important;
+}
+
+.quarto-title-meta-contents,
+.quarto-title-meta-contents p,
+.quarto-title-meta-author,
+.quarto-title-authors {
+  font-family: $font-family-sans-serif;
+  font-size: 0.85rem;
+  color: $ink;
+}
+
+.quarto-title .quarto-categories {
+  margin-top: 0.9rem;
+}
+
+.quarto-category,
+.quarto-title .quarto-categories .quarto-category,
+.quarto-title-block a.quarto-category,
+.quarto-title-block .quarto-category a {
+  text-decoration: none !important;
+  font-family: $font-family-sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  color: $berkeley-blue;
+  background: $wash;
+  border: none;
+  border-radius: 3px;
+  padding: 0.18rem 0.55rem;
+  opacity: 1;
+}
+
+// Research-paper detail pages put the abstract under an h2; keep it calm.
+.abstract-title {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $muted;
+}
+
+// ---------- Dated rows: one system for posts, papers and education ----------
+// A narrow left column carries the date or year; the entry sits to its right.
+
+$date-col: 6.75rem;
+
+.dated,
+.post-row {
+  display: grid;
+  grid-template-columns: $date-col minmax(0, 1fr);
+  column-gap: 1.5rem;
+  padding: 1.15rem 0 1.2rem;
+  border-top: 1px solid $rule;
+
+  > p,
+  > .post-main {
+    grid-column: 2;
+    margin: 0;
+  }
+
+  > p + p {
+    margin-top: 0.45rem;
+  }
+
+  > p:first-child + p {
+    margin-top: 0;
+  }
+}
+
+.dated > p:first-child {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  margin: 0;
+}
+
+.dated .year,
+.post-date {
+  font-family: $font-family-sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "tnum", "lnum";
+  color: $muted;
+}
+
+.dated .year {
+  display: block;
+  padding-top: 0.2rem;
+}
+
+.post-date {
+  grid-column: 1;
+  padding-top: 0.2rem;
+  white-space: nowrap;
+}
+
+.dated:last-child,
+.post-row:last-child {
+  border-bottom: 1px solid $rule;
+}
+
+.dated + .dated,
+.post-row + .post-row {
+  border-top: 1px solid $rule;
+}
+
+@media (max-width: 575.98px) {
+  .dated,
+  .post-row {
+    display: block;
+    padding: 1rem 0 1.05rem;
+  }
+  .dated .year,
+  .post-date {
+    display: block;
+    margin-bottom: 0.25rem;
+    padding-top: 0;
+  }
+}
+
+// ---------- Research list ----------
+
+.dated.pub {
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+}
+
+.pub {
+  strong:first-child {
+    display: inline-block;
+    font-size: 1.0556rem;      // 19px
+    line-height: 1.38;
+    color: $ink;
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.003em;
+  }
+
+  .pub-authors {
+    color: $ink;
+  }
+
+  .pub-venue {
+    color: $muted;
+  }
+
+  .pub-venue em {
+    color: $ink;
+  }
+}
+
+.pub-links {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.15rem;
+  margin-top: 0.15rem;
+
+  a {
+    color: $berkeley-blue;
+  }
+}
+
+// ---------- Post listings ----------
+
+.post-list {
+  margin-top: 0.5rem;
+}
+
+.post-title,
+#quarto-document-content .post-title {
+  font-family: $font-family-serif;
+  font-size: 1.1667rem;
+  line-height: 1.3;
+  margin: 0 0 0.3rem;
+  padding: 0;
+  letter-spacing: -0.008em;
+
+  a {
+    color: $berkeley-blue;
+    text-decoration: none !important;
+  }
+
+  a:hover {
+    color: $founders-rock;
+  }
+}
+
+.post-blurb {
+  color: $muted;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.post-cats {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.post-cat {
+  font-family: $font-family-sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: $berkeley-blue !important;
+  background: $wash;
+  border-radius: 3px;
+  padding: 0.12rem 0.5rem;
+  text-decoration: none !important;
+  cursor: pointer;
+
+  &:hover {
+    background: darken($wash, 4%);
+  }
+}
+
+// Category filter in the margin of the posts page
+#quarto-margin-sidebar .quarto-listing-category-title {
+  font-family: $font-family-sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: $muted;
+  margin: 0.35rem 0 0.6rem;
+}
+
+#quarto-margin-sidebar .quarto-listing-category {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+}
+
+#quarto-margin-sidebar .quarto-listing-category .category {
+  font-size: 0.8rem;
+  padding: 0.12rem 0;
+  color: $ink;
+  cursor: pointer;
+
+  &.active {
+    color: $berkeley-blue;
+    font-weight: 600;
+  }
+}
+
+#quarto-margin-sidebar .quarto-listing-category .category .quarto-category-count {
+  color: $muted;
+  font-weight: 400;
+}
+
+// ---------- Home page ----------
+
+// The hero carries the name, so the standard title block is hidden here.
+.home-page #title-block-header {
+  display: none;
+}
+
+.home {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  column-gap: 3.75rem;
+  align-items: center;
+  padding: 3.25rem 0 3.5rem;
+
+  > p:first-child {
+    margin: 0;
+  }
+}
+
+.hero-portrait {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 32%;
+  border-radius: 2px !important;
+}
+
+#quarto-document-content .hero-name,
+.hero-name {
+  font-size: 3.4rem;          // ~61px
+  line-height: 1.02;
+  letter-spacing: -0.022em;
+  margin: 0 0 0.85rem;
+  color: $berkeley-blue;
+}
+
+.hero-role {
+  display: block;
+  font-family: $font-family-sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: $muted;
+  margin: 0 0 1.5rem;
+}
+
+.hero-bio {
+  font-size: 1.1667rem;       // 21px
+  line-height: 1.55;
+  max-width: 32em;
+  margin: 0 0 1.4rem;
+}
+
+.hero-contact {
+  display: block;
+  font-family: $font-family-sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  column-gap: 4.5rem;
+  border-top: 1px solid $rule;
+  padding-top: 0.6rem;
+  margin-bottom: 3rem;
+
+  #quarto-document-content & h2,
+  h2 {
+    font-size: 1.1667rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .post-row {
+    grid-template-columns: 6.25rem minmax(0, 1fr);
+  }
+
+  .post-cats {
+    display: none;
+  }
+
+  .dated {
+    grid-template-columns: 3rem minmax(0, 1fr);
+    column-gap: 1.1rem;
+  }
+}
+
+.more-link {
+  display: block;
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.9rem;
+}
+
+.edu-school {
+  font-weight: 700;
+}
+
+.edu-place {
+  display: block;
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  color: $muted;
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 991.98px) {
+  .hero {
+    grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+    column-gap: 2.25rem;
+    padding: 2.25rem 0 2.5rem;
+  }
+  #quarto-document-content .hero-name,
+  .hero-name {
+    font-size: 2.6rem;
+  }
+  .home-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 1.6rem;
+    padding: 1.5rem 0 2rem;
+  }
+  .hero-portrait {
+    width: 168px;
+    aspect-ratio: 1 / 1;
+  }
+  #quarto-document-content .hero-name,
+  .hero-name {
+    font-size: 2.3rem;
+  }
+  .hero-bio {
+    font-size: 1.0556rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

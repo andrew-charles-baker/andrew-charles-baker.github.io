@@ -2,28 +2,111 @@
 title: "Research"
 ---
 
-## Working Papers
+## Working papers
 
-**The Dubious Impact of State Antitakeover Provisions**, Forthcoming, *Critical Finance Review*. This version: 2026. [\[PDF\]](working_papers/antitakeover/antitakeover.pdf) [\[Code\]](https://github.com/andrew-charles-baker/Antitakeover_CFR) [\[Summary Post\]](https://andrew-charles-baker.github.io/posts/antitakeover/)
+::: {.dated .pub}
+[2026]{.year}
 
-**The Law Review Match**, Forthcoming, *Michigan State Law Review*. This version: 2026. [\[PDF\]](working_papers/law_review_matching/The_Law_Review_Match.pdf) [\[SSRN\]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102) [\[Summary Post\]](https://andrew-charles-baker.github.io/posts/law_review_match/)
+**The Dubious Impact of State Antitakeover Provisions**\
+[Forthcoming, *Critical Finance Review*. This version: 2026.]{.pub-venue}
 
-**The Effects of Hedge Fund Activism** This version: 2021. [\[PDF\]](working_papers/activism/Baker_JMP.pdf)
+[[PDF](working_papers/antitakeover/antitakeover.pdf) [Code](https://github.com/andrew-charles-baker/Antitakeover_CFR) [Summary post](../posts/antitakeover/index.qmd)]{.pub-links}
+:::
 
-## Published Papers
+::: {.dated .pub}
+[2026]{.year}
 
-**Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes** with Jonah B. Gelbach and Eric L. Talley, 2026, *Journal of Corporation Law*. [\[PDF\]](articles/ml_comp/paper.pdf) [\[Code\]](https://github.com/andrew-charles-baker/validating-valuation) [\[Summary Post\]](https://andrew-charles-baker.github.io/posts/validating_valuation/)
+**The Law Review Match**\
+[Forthcoming, *Michigan State Law Review*. This version: 2026.]{.pub-venue}
 
-**Difference-in-Differences Designs: A Practitioner's Guide** with Brantly Callaway, Scott Cunningham, Andrew Goodman-Bacon, and Pedro Sant'Anna, 2026, *Journal of Economic Literature*. [\[Paper\]](articles/jel/DiD_JEL.pdf) [\[Github\]](https://github.com/pedrohcgs/JEL-DiD) [\[Code\]](articles/jel/JEL-DiD.zip)
+[[PDF](working_papers/law_review_matching/The_Law_Review_Match.pdf) [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5683102) [Summary post](../posts/law_review_match/index.qmd)]{.pub-links}
+:::
 
-**Statistical Learning Can Help the Judiciary Fulfill Its Gatekeeping Role Over Expert Witnesses** *Berkeley Business Law Journal*, 2025. [\[PDF\]](articles/bblj/Statistical%20Learning%20BBLJ.pdf)
+::: {.dated .pub}
+[2021]{.year}
 
-**Diversity Washing** with David F. Larcker, Charles G. McClure, Durgesh Saraph, and Edward M. Watts *Journal of Accounting Research*, 2024. [\[PDF\]](articles/diversity_washing/diversity_washing.pdf) [\[Replication Files\]](https://www.chicagobooth.edu/-/media/research/arc/docs/journal/online-supplements/blmsw-datasheet-code-and-identifiers.zip)
+**The Effects of Hedge Fund Activism**\
+[This version: 2021.]{.pub-venue}
 
-**How Much Should We Trust Staggered Difference-in-Differences Estimates?** with David F. Larcker and Charles C.Y. Wang *Journal of Financial Economics*, 144(2), 2022. [\[PDF\]](articles/staggered_did/did.pdf) [\[Code\]](https://github.com/andrewchbaker/JFE_DID)
+[[PDF](working_papers/activism/Baker_JMP.pdf)]{.pub-links}
+:::
 
-**Machine Learning and Predicted Returns for Event Studies in Securities Litigation** with Jonah B. Gelbach *Journal of Law, Finance, and Accounting*, 5(2), 2020. [\[PDF\]](articles/bagel/bagel.pdf) [\[Code\]](https://github.com/andrewchbaker/BaGel)
+## Published papers
 
-**Dual-Class Index Exclusion** with Andrew Winden *Virginia Law & Business Review*, 13(2), 2019. [\[PDF\]](articles/dual_class/Baker_Winden_2019.pdf)
+::: {.dated .pub}
+[2026]{.year}
 
-**Single-Firm Event Studies, Securities Fraud, and Financial Crisis: Problems of Inference** *Stanford Law Review*, 68, 2016. [\[PDF\]](articles/slr/2016_SLR_Note.pdf) [\[Code\]](articles/slr/Codes.zip) [\[Data\]](articles/slr/Data.zip)
+**Validating Valuation: How Statistical Learning Can Cabin Expert Discretion in Valuation Disputes**\
+[with Jonah B. Gelbach and Eric L. Talley]{.pub-authors}\
+[*Journal of Corporation Law*, 2026.]{.pub-venue}
+
+[[PDF](articles/ml_comp/paper.pdf) [Code](https://github.com/andrew-charles-baker/validating-valuation) [Summary post](../posts/validating_valuation/index.qmd)]{.pub-links}
+:::
+
+::: {.dated .pub}
+[2026]{.year}
+
+**Difference-in-Differences Designs: A Practitioner's Guide**\
+[with Brantly Callaway, Scott Cunningham, Andrew Goodman-Bacon, and Pedro Sant'Anna]{.pub-authors}\
+[*Journal of Economic Literature*, 2026.]{.pub-venue}
+
+[[Paper](articles/jel/DiD_JEL.pdf) [GitHub](https://github.com/pedrohcgs/JEL-DiD) [Code](articles/jel/JEL-DiD.zip)]{.pub-links}
+:::
+
+::: {.dated .pub}
+[2025]{.year}
+
+**Statistical Learning Can Help the Judiciary Fulfill Its Gatekeeping Role Over Expert Witnesses**\
+[*Berkeley Business Law Journal*, 2025.]{.pub-venue}
+
+[[PDF](articles/bblj/Statistical%20Learning%20BBLJ.pdf)]{.pub-links}
+:::
+
+::: {.dated .pub}
+[2024]{.year}
+
+**Diversity Washing**\
+[with David F. Larcker, Charles G. McClure, Durgesh Saraph, and Edward M. Watts]{.pub-authors}\
+[*Journal of Accounting Research*, 2024.]{.pub-venue}
+
+[[PDF](articles/diversity_washing/diversity_washing.pdf) [Replication files](https://www.chicagobooth.edu/-/media/research/arc/docs/journal/online-supplements/blmsw-datasheet-code-and-identifiers.zip)]{.pub-links}
+:::
+
+::: {.dated .pub}
+[2022]{.year}
+
+**How Much Should We Trust Staggered Difference-in-Differences Estimates?**\
+[with David F. Larcker and Charles C.Y. Wang]{.pub-authors}\
+[*Journal of Financial Economics*, 144(2), 2022.]{.pub-venue}
+
+[[PDF](articles/staggered_did/did.pdf) [Code](https://github.com/andrewchbaker/JFE_DID)]{.pub-links}
+:::
+
+::: {.dated .pub}
+[2020]{.year}
+
+**Machine Learning and Predicted Returns for Event Studies in Securities Litigation**\
+[with Jonah B. Gelbach]{.pub-authors}\
+[*Journal of Law, Finance, and Accounting*, 5(2), 2020.]{.pub-venue}
+
+[[PDF](articles/bagel/bagel.pdf) [Code](https://github.com/andrewchbaker/BaGel)]{.pub-links}
+:::
+
+::: {.dated .pub}
+[2019]{.year}
+
+**Dual-Class Index Exclusion**\
+[with Andrew Winden]{.pub-authors}\
+[*Virginia Law & Business Review*, 13(2), 2019.]{.pub-venue}
+
+[[PDF](articles/dual_class/Baker_Winden_2019.pdf)]{.pub-links}
+:::
+
+::: {.dated .pub}
+[2016]{.year}
+
+**Single-Firm Event Studies, Securities Fraud, and Financial Crisis: Problems of Inference**\
+[*Stanford Law Review*, 68, 2016.]{.pub-venue}
+
+[[PDF](articles/slr/2016_SLR_Note.pdf) [Code](articles/slr/Codes.zip) [Data](articles/slr/Data.zip)]{.pub-links}
+:::
