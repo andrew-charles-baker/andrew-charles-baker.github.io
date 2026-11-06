@@ -7,6 +7,16 @@ title: "Research"
 ::: {.dated .pub}
 [2026]{.year}
 
+**Measuring Corporate Governance from the Source: Language Models and the Full Proxy Corpus**\
+[with Paul Goldsmith-Pinkham]{.pub-authors}\
+[Work in progress. Slides from NBER Corporate Finance, November 2026.]{.pub-venue}
+
+[[Slides](working_papers/governance_proxy/BGP_NBER.pdf)]{.pub-links}
+:::
+
+::: {.dated .pub}
+[2026]{.year}
+
 **The Dubious Impact of State Antitakeover Provisions**\
 [Forthcoming, *Critical Finance Review*. This version: 2026.]{.pub-venue}
 
